@@ -32,13 +32,29 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 40px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
         }
 
         .logo {
             height: 80px;
             width: auto;
+            order: 1;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            order: 2;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
         nav {
@@ -51,6 +67,8 @@
             margin: 0 20px;
             font-size: 18px;
             text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
         nav a:hover {
@@ -58,17 +76,54 @@
             border-bottom: 2px solid #f1f1f1;
         }
 
-        .hamburger {
-            display: none;
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #003366;
+            color: white;
+            overflow-x: hidden;
+            transition: width 0.4s ease-in-out;
+            padding-top: 60px;
+            z-index: 1000;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+            display: flex;
             flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
         }
 
-        .hamburger div {
-            width: 30px;
-            height: 3px;
-            background-color: white;
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 24px;
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #fff;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #ffffff;
+            color: #002f6c;
+            transform: translateX(10px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar .close-btn {
+            font-size: 36px;
+            color: white;
+            border: none;
+            background: none;
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         @media (max-width: 768px) {
@@ -271,23 +326,29 @@
                 <div></div>
                 <div></div>
             </div>
-            <nav id="navbar">
-                <a href="./index.html">Home</a>
-                <a href="./motive.html">Motive</a>
-                <a href="./founders.html">Meet Our Founders</a>
-                <a href="./jobs.html">Job Openings</a>
-                <a href="./projects.html">Our Projects</a>
-            </nav>
+        
         </header>
+
+        <div id="sidebar" class="sidebar">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <a href="./index.html">Home</a>
+            <a href="./motive.html">Motive</a>
+            <a href="./founders.html">Our Team</a>
+            <a href="./timeline.html">Timeline</a>
+            <a href="./jobs.html">Job Openings</a>
+            <a href="./projects.html">Our Projects</a>
+            <a href="./listsurvey.html">Surveys</a>
+        </div>
+
         <main>
             <section class="job-openings-section" id="jobs">
                 <h1>Job Openings</h1>
                 <div class="jobs-grid">
                     <div class="job-card">
-                        <h2>OPD Now Developer Intern</h2>
+                        <h2>IPD Now Developer Intern</h2>
                         <p>
                             Join <strong>Shudveta</strong> to work on our flagship healthcare project, 
-                            <strong>OPD Now</strong>. You'll help integrate an AI-powered chatbot and build scalable 
+                            <strong>IPD Now</strong>. You'll help integrate an AI-powered chatbot and build scalable 
                             solutions for healthcare accessibility.
                         </p>
                         <p><strong>What you'll work on:</strong></p>
@@ -304,6 +365,31 @@
                         </ul>
                         <button disabled style="background-color: gray; cursor: not-allowed;">Applications Closed</button>
                     </div>
+
+
+                    
+                    <div class="job-card">
+                        <h2>IPD Now Product Manager Internship</h2>
+                        <p>
+                            Join <strong>Shudveta</strong> as a Product Manager Intern and gain valuable hands-on experience in shaping innovative products. Collaborate with a dynamic team and help drive the future of <strong>IPD Now</strong>!
+                        </p>
+                        <p><strong>What you'll work on:</strong></p>
+                        <ul>
+                            <li>Developing policies and team culture</li>
+                            <li>Managing intern engagement and conflict resolution</li>
+                            <li>Collaborating with developers and designers to improve the product</li>
+                        </ul>
+                        <p><strong>Benefits:</strong></p>
+                        <ul>
+                            <li>Valid certificates upon completion</li>
+                            <li>Exclusive Offline meet-ups </li>
+                            <li>Letter of Recommendation</li>
+                        </ul>
+                        <button onclick="gotoform()" >Apply</button>
+                    </div>
+
+
+
                 </div>
             </section>
         </main>
@@ -322,15 +408,24 @@
 
     <script>
         const hamburger = document.getElementById('hamburger');
-        const navbar = document.getElementById('navbar');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.getElementById('closeBtn');
 
         hamburger.addEventListener('click', () => {
-            navbar.style.display = navbar.style.display === 'none' || navbar.style.display === '' ? 'flex' : 'none';
+            sidebar.style.width = "250px";
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.style.width = "0";
         });
 
         function redirectToInternPage() {
     window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc2Q3LB1fE2mFmyWhHQb9LBffqxEwKl1qkkd9bN3JgIUc630g/viewform?usp=header";
   }
+
+    function gotoform() {
+        window.location.href = "https://forms.gle/qDhh5irpMHb2tBRPA";
+    }
     </script>
 </body>
 </html>

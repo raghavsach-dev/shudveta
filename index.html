@@ -6,31 +6,26 @@
     <meta name="author" content="Shudveta">
     <meta name="robots" content="index, follow">
     <meta name="language" content="en">
-
     <meta name="description" content="Shudveta is a technology-driven partnership focused on transforming healthcare and IT solutions through innovation, efficiency, and accessibility.">
     <meta name="keywords" content="Shudveta, healthcare technology, innovation, IT solutions, digital transformation, health tech, AI in healthcare">
-
     <meta property="og:title" content="Shudveta - Innovating Healthcare & Technology">
     <meta property="og:description" content="Shudveta is revolutionizing healthcare and technology by building smart, scalable, and impactful solutions for a better future.">
     <meta property="og:image" content="https://shudveta.in/logo.png">
     <meta property="og:url" content="https://shudveta.in">
     <meta property="og:type" content="website">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Shudveta - Innovating Healthcare & Technology">
     <meta name="twitter:description" content="Shudveta is dedicated to creating next-gen healthcare and IT solutions, bridging the gap between technology and accessibility.">
     <meta name="twitter:image" content="https://shudveta.in/logo.png">
     <meta name="twitter:site" content="@shudveta">
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shudveta</title>
     <link rel="icon" href="./favicon.png" type="image/x-icon">
+    <title>Shudveta</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
             color: #333;
         }
@@ -53,6 +48,23 @@
         .logo {
             height: 80px;
             width: auto;
+            order: 1;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            order: 2;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
         nav {
@@ -65,6 +77,8 @@
             margin: 0 20px;
             font-size: 18px;
             text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
         nav a:hover {
@@ -72,18 +86,54 @@
             border-bottom: 2px solid #f1f1f1;
         }
 
-        /* Hamburger Icon */
-        .hamburger {
-            display: none;
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #003366;
+            color: white;
+            overflow-x: hidden;
+            transition: width 0.4s ease-in-out;
+            padding-top: 60px;
+            z-index: 1000;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+            display: flex;
             flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
         }
 
-        .hamburger div {
-            width: 30px;
-            height: 3px;
-            background-color: white;
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 24px;
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #fff;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #ffffff;
+            color: #002f6c;
+            transform: translateX(10px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar .close-btn {
+            font-size: 36px;
+            color: white;
+            border: none;
+            background: none;
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         /* Mobile View */
@@ -94,40 +144,13 @@
                 justify-content: space-between;
                 align-items: center;
             }
-            .logo {
-                height: 60px;
-            }
+
             nav {
                 display: none;
-                flex-direction: column;
-                align-items: center;
-                position: absolute;
-                top: 100%; /* Position the menu below the header */
-                left: 0;
-                width: 100%;
-                background-color: #002f6c;
-                padding-top: 20px;
-                padding-bottom: 20px;
             }
-            nav a {
-                margin: 10px 0;
-                font-size: 16px;
-            }
+
             .hamburger {
                 display: flex;
-            }
-        }
-
-        /* Tablet View */
-        @media (max-width: 1024px) {
-            header {
-                padding: 20px 30px;
-            }
-            .logo {
-                height: 70px;
-            }
-            nav a {
-                font-size: 17px;
             }
         }
 
@@ -160,47 +183,6 @@
             font-size: 20px;
         }
 
-        @media (min-width: 1025px) {
-            .about-section {
-                padding: 60px 20px;
-            }
-            .about-section p {
-                max-width: 1200px;
-                font-size: 20px;
-            }
-        }
-
-        footer {
-            background-color: #000000;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 16px;
-            margin-top: auto;
-        }
-
-        footer .footer-content p {
-            margin: 5px 0;
-        }
-
-        footer .footer-content a {
-            color: #f1f1f1;
-            text-decoration: none;
-        }
-
-        footer .footer-content a:hover {
-            color: #e0e0e0;
-        }
-
-        @media (max-width: 768px) {
-            footer {
-                padding: 15px 0;
-                font-size: 14px;
-            }
-            footer .footer-content p {
-                margin: 3px 0;
-            }
-        }
         footer {
             background-color: #000000;
             color: white;
@@ -230,12 +212,12 @@
 
         .social-links a {
             text-decoration: none;
-            color: #002f6c;
+            color: #ffffff;
             margin: 0 15px;
         }
 
         .social-links a:hover {
-            color: #f1f1f1;
+            color: #002f6c; /* Existing hover color */
         }
 
         .social-links i {
@@ -253,14 +235,19 @@
                 <div></div>
                 <div></div>
             </div>
-            <nav id="navbar">
-                <a href="./index.html">Home</a>
-                <a href="./motive.html">Motive</a>
-                <a href="./founders.html">Meet Our Founders</a>
-                <a href="./jobs.html">Job Openings</a>
-                <a href="./projects.html">Our Projects</a>
-            </nav>
         </header>
+
+        <!-- Sidebar -->
+        <div id="sidebar" class="sidebar">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <a href="./index.html">Home</a>
+            <a href="./motive.html">Motive</a>
+            <a href="./founders.html">Our Team</a>
+            <a href="./timeline.html">Timeline</a>
+            <a href="./jobs.html">Job Openings</a>
+            <a href="./projects.html">Our Projects</a>
+            <a href="./listsurvey.html">Surveys</a>
+        </div>
 
         <main>
             <!-- About Section -->
@@ -268,8 +255,9 @@
                 <p>Shudveta is a visionary partnership established by <span class="highlight">Raghav Sachdev</span> and <span class="highlight">Dhruvi Mittal</span>, two passionate individuals united by a deep commitment to creating transformative and meaningful solutions. Our journey is not just about technology or business; it's about combining our unique experiences and perspectives to build something that truly makes a difference in the world.</p>
                 <p>The name "Shudveta" holds a special significance, as it is derived from the names of our mothers — <span class="highlight">Sudha</span> and <span class="highlight">Shaveta</span>. This blend symbolizes "<span class="highlight">Pure Nectar</span>," representing the essence of care, love, wisdom, and nurturing. Our mothers have been the guiding lights in our lives, shaping our values and inspiring us to pursue this entrepreneurial path. Through Shudveta, we honor them, their teachings, and the profound impact they have had on our lives.</p>
                 <p>At Shudveta, we are not just focused on creating products or services; we aim to create lasting, positive change by solving real-world problems. Our focus lies primarily in the healthcare and technology sectors, where we believe innovation can bridge gaps and improve lives. Our flagship initiative is aimed at revolutionizing healthcare delivery, especially in improving real-time hospital data, patient care accessibility, and enhancing efficiency for both patients and healthcare providers.</p>
-                <p>We are driven by the belief that technology, when used thoughtfully and ethically, can be a powerful force for good. We work tirelessly to ensure that our solutions reflect our core values of trust, integrity, and excellence. Our journey is just beginning, and we are excited to continue exploring new opportunities, building strong partnerships, and making an impact that transcends traditional business objectives.</p>
-                <p class="quote">"Through innovation, dedication, and a heart-driven mission, we can truly make the world a better place, one step at a time." – <span class="highlight">Shudveta Team</span></p>
+                <p>We are driven by the belief that technology should not only be accessible but also impactful. Every project we embark on is designed to make a difference and is aligned with our core values of empathy, collaboration, and progress.</p>
+
+                <p style="color: #002f6c; font-weight: bold;" class="quote">"परंपरा से प्रेरणा, नवाचार से प्रगति।"</p>
             </section>
         </main>
 
@@ -281,6 +269,7 @@
                     <a href="https://www.linkedin.com/company/shudveta" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/shudveta" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://x.com/shudveta" target="_blank"><i class="fab fa-twitter"></i></a>
+    
                 </div>
             </div>
         </footer>
@@ -288,10 +277,15 @@
 
     <script>
         const hamburger = document.getElementById('hamburger');
-        const navbar = document.getElementById('navbar');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.getElementById('closeBtn');
 
         hamburger.addEventListener('click', () => {
-            navbar.style.display = navbar.style.display === 'flex' ? 'none' : 'flex';
+            sidebar.style.width = "250px";
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.style.width = "0";
         });
     </script>
 

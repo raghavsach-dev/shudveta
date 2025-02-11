@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="./favicon.png" type="image/x-icon">
-    <title>Shudveta - Our Projects</title>
+    <title>Shudveta - Ongoing Surveys</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -116,38 +116,37 @@
             cursor: pointer;
         }
 
+
         /* Mobile View */
         @media (max-width: 768px) {
             .hamburger {
-                display: flex; /* Make it visible on small screens */
+                display: flex; 
             }
 
             nav {
-                display: none; /* Hide navbar initially */
+                display: none; 
                 flex-direction: column;
                 align-items: center;
                 background-color: #002f6c;
                 width: 100%;
                 position: absolute;
-                top: 100%; /* Position below the header */
+                top: 100%;
                 left: 0;
-                padding: 0; /* Remove any padding that could cause extra space */
-                margin: 0; /* Remove any margin */
-                box-shadow: none; /* Remove box-shadow */
-                border: none; /* Ensure no border */
             }
 
             nav a {
                 margin: 10px 0;
-                font-size: 16px;
+            }
+
+            header {
+                padding: 20px;
             }
         }
 
-        /* Our Projects Section */
+        /* Projects Section */
         .projects-section {
             padding: 40px 20px;
             background-color: #ffffff;
-            color: #333333;
             text-align: center;
         }
 
@@ -190,45 +189,34 @@
             padding: 10px;
             width: 100%;
             font-size: 16px;
-            cursor: not-allowed;
             border-radius: 5px;
             margin-top: 10px;
+            cursor: pointer;
         }
 
-        .projects-section-main {
-            margin-top: -90px;
-            padding: 60px 20px;
-            background-color: #ffffff;
-            text-align: center;
+        .survey-code-form {
+            margin-top: 20px;
         }
 
-        .projects-section-main h1 {
-            font-size: 42px;
-            font-weight: 600;
-            color: #002f6c;
-            margin-bottom: 40px;
-            text-transform: uppercase;
+        .survey-code-input {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
 
-        .message {
-            font-size: 24px;
-            font-weight: bold;
-            color: #555;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        /* Responsive Grid Layout */
-        @media (max-width: 1024px) {
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr; /* 1 column for mobile */
-            }
+        .survey-code-btn {
+            background-color: #002f6c;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
         }
 
         /* Footer Styling */
@@ -253,7 +241,77 @@
             color: #e0e0e0;
         }
 
-        /* Make the footer responsive */
+        /* Mobile and Tablet Adjustments */
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-card {
+                font-size: 14px;
+            }
+
+            .survey-code-input {
+                width: 80%;
+                margin-right: 0;
+            }
+
+            .survey-code-btn {
+                width: 80%;
+                background-color: #002f6c;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .survey-code-input, .survey-code-btn {
+                width: 90%;
+                
+            }
+
+            .survey-code-btn {
+                background-color: #002f6c;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+            }
+        }
+
+        .projects-section-main h1 {
+            margin-bottom: 40px;
+            font-size: 42px;
+            font-weight: 600;
+            color: #002f6c;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #555;
+            text-align: center;
+            margin-top: 40px;
+        }
+
         @media (max-width: 768px) {
             footer {
                 padding: 15px 0;
@@ -304,6 +362,8 @@
         .social-links i {
             font-size: 24px;
         }
+
+        
     </style>
 </head>
 <body>
@@ -327,19 +387,18 @@
         <a href="./listsurvey.html">Surveys</a>
     </div>
 
-
     <section class="projects-section" id="projects">
         <section class="projects-section-main" id="jobs">
-            <h1>Our Projects</h1>
-            <p class="message">We are currently working on a few exciting projects. Stay tuned for more updates!</p>
+            <h1>Ongoing Surveys</h1>
+            <p class="message">Check Out Ongoing Surveys Below</p>
         </section>
         <div class="projects-grid">
             <div class="project-card">
-                <img src="./applogo.jpeg" alt="IPD Now Logo" class="project-logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/1313/1313230.png" alt="Survey Icon" class="project-logo">
                 <div class="project-description">
-                    <p>IPD Now is being designed as an innovative healthcare platform that aims to provide real-time information on hospital resources...</p>
+                    <p>The "Private Hospital IPD Now Integrations Survey" gathers feedback on technology use in the In-Patient Department to improve patient care and hospital efficiency.</p>
                 </div>
-                <button class="coming-soon-btn" disabled>Coming Soon</button>
+                <button class="coming-soon-btn" onclick="visitlink()">Take Survey</button>
             </div>
         </div>
     </section>
@@ -369,8 +428,11 @@
         closeBtn.addEventListener('click', () => {
             sidebar.style.width = "0";
         });
+    
+        function visitlink() {
+            window.location = "https://jstrieb.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiRzBsbFVQWUhLTHZiNTZXYTJCMEF6RWs2VGNsSjhxL2RYUUNia1hSa011NEthN3krTkNNMnVUSFVHK0xlaHp2SldJcFFteWRHdWcyZ28wVk83RnhzZ3pidnVUcTJhMkl2VThXQVRRZHpIOERKbi95Y1BJSkZtV09Xb1N6T0dyNU05VHhobnlFUHJodjU5cDJRL1dvbEhkVit5Zz09IiwicyI6Ikc0SDhUSEVHRDhRQzZhUXFLVndiSVE9PSIsImkiOiJLR3QwN0NxR2hKTzk1VWdnIn0=";
+        }
     </script>
 
-    
 </body>
 </html>
