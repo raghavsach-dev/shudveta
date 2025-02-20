@@ -251,7 +251,7 @@
             }
 
             .founder-card {
-                width: 400px;
+                width: 500px;
                 max-width: 500px;
             }
         }
@@ -260,11 +260,32 @@
             .founder-cards {
                 flex-direction: column;
                 align-items: center;
+                gap: 30px; /* Reduced gap between cards */
             }
 
             .founder-card {
-                width: 85%;
+                width: 90%; /* Increased from 85% to use more screen width */
                 max-width: none;
+                padding: 20px; /* Reduced padding */
+                margin-bottom: 30px; /* Reduced margin */
+            }
+
+            .founder-image {
+                width: 150px; /* Slightly smaller image */
+                height: 150px;
+            }
+
+            .founder-name {
+                font-size: 22px; /* Slightly smaller font */
+            }
+
+            .founder-position {
+                font-size: 18px;
+            }
+
+            .founder-about {
+                font-size: 14px;
+                padding: 0 5px;
             }
         }
 
@@ -399,6 +420,13 @@
         .founder-position {
             font-weight: bold; /* Improve visibility of position titles */
         }
+        @media (max-width: 768px) {
+            .team-card {
+                width: 90%; /* Increased from previous value */
+                max-width: none;
+                margin: 20px auto; /* Center the cards */
+            }
+        }
     </style>
 </head>
 <body>
@@ -434,7 +462,7 @@
                 <img src="https://media.licdn.com/dms/image/v2/D4D03AQEelZj32P93Eg/profile-displayphoto-shrink_400_400/B4DZTGhLw1HAAg-/0/1738497376382?e=1744243200&v=beta&t=WGY0V4WrNxc7oSgC41lzBupWYQD90kB0Q4d1nFVPWIg" alt="Raghav Sachdev" class="founder-image">
                 <h2 class="founder-name">Raghav Sachdev</h2>
                 <p class="founder-position">Co-Founder & App Developer</p>
-                <p class="founder-about">Raghav Sachdev is a visionary entrepreneur and the driving force behind Shudveta’s mission to bring technological advancements to the healthcare industry. He leverages his expertise in software development, digital marketing, and healthcare technology to create innovative solutions. His leadership is defined by a passion for improving healthcare accessibility, empathy-driven solutions, and a commitment to delivering results that matter.</p>
+                <p class="founder-about">Raghav Sachdev is a visionary entrepreneur and the driving force behind Shudveta's mission to bring technological advancements to the healthcare industry. He leverages his expertise in software development, digital marketing, and healthcare technology to create innovative solutions. His leadership is defined by a passion for improving healthcare accessibility, empathy-driven solutions, and a commitment to delivering results that matter.</p>
                 <!-- Social Media Links -->
                 <div class="social-links">
                     <a href="https://www.instagram.com/sachdev.eloper" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -449,7 +477,7 @@
                 <img src="https://media.licdn.com/dms/image/v2/D5603AQFym5P04Jrb3A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729791075650?e=1743033600&v=beta&t=hJD3-w18oUchcdBWcNV_WiZ0T6TWF_KYSRESlWpDrQc" alt="Dhruvi" class="founder-image">
                 <h2 class="founder-name">Dhruvi Mittal</h2>
                 <p class="founder-position">Co-Founder & Web Developer</p>
-                <p class="founder-about">Dhruvi Mittal is a strategic leader who ensures Shudveta’s operations run smoothly and efficiently. With a background in healthcare systems, project management, and a strong passion for developing impactful products, Dhruvi brings the vision to life. Her expertise in healthcare solutions, combined with a deep understanding of user needs, enables her to drive Shudveta’s mission of innovation and excellence.</p>
+                <p class="founder-about">Dhruvi Mittal is a strategic leader who ensures Shudveta's operations run smoothly and efficiently. With a background in healthcare systems, project management, and a strong passion for developing impactful products, Dhruvi brings the vision to life. Her expertise in healthcare solutions, combined with a deep understanding of user needs, enables her to drive Shudveta's mission of innovation and excellence.</p>
                 <!-- Social Media Links -->
                 <div class="social-links">
                     <a href="https://www.instagram.com/dhruvi_806" target="_blank"><i class="fab fa-instagram"></i></a>
