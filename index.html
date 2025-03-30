@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2894220789338273"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Shudveta">
@@ -20,218 +18,35 @@
     <meta name="twitter:description" content="Shudveta is dedicated to creating next-gen healthcare and IT solutions, bridging the gap between technology and accessibility.">
     <meta name="twitter:image" content="https://shudveta.in/logo.png">
     <meta name="twitter:site" content="@shudveta">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2894220789338273"
+    crossorigin="anonymous"></script>
+    
+    <!-- Favicon -->
     <link rel="icon" href="./favicon.png" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
     <title>Shudveta</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .container {
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        header {
-            background-color: #002f6c;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            position: relative;
-        }
-
-        .logo {
-            height: 80px;
-            width: auto;
-            order: 1;
-        }
-
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            order: 2;
-        }
-
-        .hamburger div {
-            width: 30px;
-            height: 3px;
-            background-color: white;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        nav {
-            display: flex;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            margin: 0 20px;
-            font-size: 18px;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        nav a:hover {
-            color: #f1f1f1;
-            border-bottom: 2px solid #f1f1f1;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #003366;
-            color: white;
-            overflow-x: hidden;
-            transition: width 0.4s ease-in-out;
-            padding-top: 60px;
-            z-index: 1000;
-            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sidebar a {
-            text-decoration: none;
-            color: white;
-            padding: 14px 24px;
-            display: block;
-            font-size: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-bottom: 2px solid #fff;
-            transition: 0.3s;
-        }
-
-        .sidebar a:hover {
-            background-color: #ffffff;
-            color: #002f6c;
-            transform: translateX(10px);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .sidebar .close-btn {
-            font-size: 36px;
-            color: white;
-            border: none;
-            background: none;
-            position: absolute;
-            top: 20px;
-            left: 25px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Mobile View */
-        @media (max-width: 768px) {
-            header {
-                padding: 20px 15px;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            nav {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 40px 20px;
-            background-color: #ffffff;
-            color: #333333;
-            text-align: justify;
-        }
-
-        .about-section p {
-            font-size: 18px;
-            line-height: 1.8;
-            margin: 20px 0;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .about-section .highlight {
-            color: #002f6c;
-            font-weight: bold;
-        }
-
-        .about-section .quote {
-            font-style: italic;
-            margin-top: 30px;
-            text-align: center;
-            font-size: 20px;
-        }
-
-        footer {
-            background-color: #000000;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 16px;
-            margin-top: auto;
-        }
-
-        footer .footer-content p {
-            margin: 5px 0;
-        }
-
-        footer .footer-content a {
-            color: #f1f1f1;
-            text-decoration: none;
-        }
-
-        footer .footer-content a:hover {
-            color: #e0e0e0;
-        }
-
-        .social-links {
-            margin-top: 10px;
-            font-size: 20px;
-        }
-
-        .social-links a {
-            text-decoration: none;
-            color: #ffffff;
-            margin: 0 15px;
-        }
-
-        .social-links a:hover {
-            color: #002f6c; /* Existing hover color */
-        }
-
-        .social-links i {
-            font-size: 24px;
-        }
-    </style>
 </head>
 <body>
-
     <div class="container">
+        <!-- Header -->
         <header>
             <img src="logo.png" alt="Shudveta Logo" class="logo">
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./motive.html">Motive</a>
+                <a href="./founders.html">Our Team</a>
+                <a href="./timeline.html">Timeline</a>
+                <a href="./jobs.html">Job Openings</a>
+                <a href="./projects.html">Our Projects</a>
+            </nav>
             <div class="hamburger" id="hamburger">
                 <div></div>
                 <div></div>
@@ -239,58 +54,160 @@
             </div>
         </header>
 
-        <!-- Sidebar -->
+        <!-- Sidebar for Mobile -->
         <div id="sidebar" class="sidebar">
             <button class="close-btn" id="closeBtn">&times;</button>
-            <a href="./index.html">Home</a>
-            <a href="./motive.html">Motive</a>
-            <a href="./founders.html">Our Team</a>
-            <a href="./timeline.html">Timeline</a>
-            <a href="./jobs.html">Job Openings</a>
-            <a href="./certificate-validator.html">Certificate Validator</a>
-            <a href="./projects.html">Our Projects</a>
-            <a href="./listsurvey.html">Surveys</a>
+            
+            <div class="sidebar-brand">
+                <img src="logo.png" alt="Shudveta Logo" class="sidebar-logo">
+                <p class="sidebar-tagline">Innovating Healthcare & Technology</p>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Main Navigation</h4>
+                <a href="./index.html"><i class="fas fa-home"></i>Home</a>
+                <a href="./motive.html"><i class="fas fa-bullseye"></i>Our Motive</a>
+                <a href="./founders.html"><i class="fas fa-users"></i>Our Team</a>
+                <a href="./timeline.html"><i class="fas fa-history"></i>Timeline</a>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Projects & Opportunities</h4>
+                <a href="./projects.html"><i class="fas fa-project-diagram"></i>Our Projects</a>
+                <a href="./jobs.html"><i class="fas fa-briefcase"></i>Job Openings</a>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Resources</h4>
+                <a href="./certificate-validator.html"><i class="fas fa-certificate"></i>Certificate Validator</a>
+                <a href="./listsurvey.html"><i class="fas fa-poll"></i>Surveys</a>
+            </div>
+
+            <div class="sidebar-social">
+                <a href="https://www.instagram.com/shudveta.official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/shudveta" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shudveta" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/shudveta" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
 
+        <!-- Main Content -->
         <main>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content animate-on-scroll">
+                    <h1>Transforming Healthcare & Technology</h1>
+                    <p>Innovative solutions for a better tomorrow</p>
+                    <div class="hero-buttons">
+                        <a href="./motive.html" class="btn btn-outline">Our Motive</a>
+                        <a href="./projects.html" class="btn btn-outline">Our Projects</a>
+                    </div>
+                </div>
+            </section>
+            
             <!-- About Section -->
             <section class="about-section">
-                <p>Shudveta is a visionary partnership established by <span class="highlight">Raghav Sachdev</span> and <span class="highlight">Dhruvi Mittal</span>, two passionate individuals united by a deep commitment to creating transformative and meaningful solutions. Our journey is not just about technology or business; it's about combining our unique experiences and perspectives to build something that truly makes a difference in the world.</p>
-                <p>The name "Shudveta" holds a special significance, as it is derived from the names of our mothers — <span class="highlight">Sudha</span> and <span class="highlight">Shaveta</span>. This blend symbolizes "<span class="highlight">Pure Nectar</span>," representing the essence of care, love, wisdom, and nurturing. Our mothers have been the guiding lights in our lives, shaping our values and inspiring us to pursue this entrepreneurial path. Through Shudveta, we honor them, their teachings, and the profound impact they have had on our lives.</p>
-                <p>At Shudveta, we are not just focused on creating products or services; we aim to create lasting, positive change by solving real-world problems. Our focus lies primarily in the healthcare and technology sectors, where we believe innovation can bridge gaps and improve lives. Our flagship initiative is aimed at revolutionizing healthcare delivery, especially in improving real-time hospital data, patient care accessibility, and enhancing efficiency for both patients and healthcare providers.</p>
-                <p>We are driven by the belief that technology should not only be accessible but also impactful. Every project we embark on is designed to make a difference and is aligned with our core values of empathy, collaboration, and progress.</p>
+                <h2 class="section-title">About Shudveta</h2>
+                <div class="text-content animate-on-scroll">
+                    <p>Shudveta is a visionary partnership established by <span class="highlight">Raghav Sachdev</span> and <span class="highlight">Dhruvi Mittal</span>, two passionate individuals united by a deep commitment to creating transformative and meaningful solutions. Our journey is not just about technology or business; it's about combining our unique experiences and perspectives to build something that truly makes a difference in the world.</p>
+                    
+                    <p>The name "Shudveta" holds a special significance, as it is derived from the names of our mothers — <span class="highlight">Sudha</span> and <span class="highlight">Shaveta</span>. This blend symbolizes "<span class="highlight">Pure Nectar</span>," representing the essence of care, love, wisdom, and nurturing. Our mothers have been the guiding lights in our lives, shaping our values and inspiring us to pursue this entrepreneurial path. Through Shudveta, we honor them, their teachings, and the profound impact they have had on our lives.</p>
+                    
+                    <p>At Shudveta, we are not just focused on creating products or services; we aim to create lasting, positive change by solving real-world problems. Our focus lies primarily in the healthcare and technology sectors, where we believe innovation can bridge gaps and improve lives. Our flagship initiative is aimed at revolutionizing healthcare delivery, especially in improving real-time hospital data, patient care accessibility, and enhancing efficiency for both patients and healthcare providers.</p>
+                    
+                    <p>We are driven by the belief that technology should not only be accessible but also impactful. Every project we embark on is designed to make a difference and is aligned with our core values of empathy, collaboration, and progress.</p>
 
-                <p style="color: #002f6c; font-weight: bold;" class="quote">"परंपरा से प्रेरणा, नवाचार से प्रगति।"</p>
+                    <div class="quote animate-on-scroll">
+                        "परंपरा से प्रेरणा, नवाचार से प्रगति।"
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Quick Links Section -->
+            <section class="quick-links-section">
+                <h2 class="section-title">Explore Shudveta</h2>
+                <div class="card-container">
+                    <div class="card animate-on-scroll">
+                        <div class="card-content">
+                            <h3 class="card-title">Our Motive</h3>
+                            <p class="card-text">Discover the vision and mission that drives Shudveta's innovative approach to healthcare and technology solutions.</p>
+                            <a href="./motive.html" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card animate-on-scroll">
+                        <div class="card-content">
+                            <h3 class="card-title">Our Team</h3>
+                            <p class="card-text">Meet the passionate individuals behind Shudveta who are committed to creating transformative solutions.</p>
+                            <a href="./founders.html" class="btn">Meet Our Team</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card animate-on-scroll">
+                        <div class="card-content">
+                            <h3 class="card-title">Our Projects</h3>
+                            <p class="card-text">Explore our innovative projects that are making a difference in healthcare and technology.</p>
+                            <a href="./projects.html" class="btn">View Projects</a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
+        <!-- Footer -->
         <footer>
-            <div class="footer-content">
-                <p>2025 Shudveta, All Rights Reserved</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/shudveta.official/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/shudveta" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/shudveta" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://x.com/shudveta" target="_blank"><i class="fab fa-twitter"></i></a>
-    
+            <div class="footer-wrapper">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="logo.png" alt="Shudveta Logo" class="footer-logo">
+                        <p class="footer-tagline">Revolutionizing healthcare through technology</p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/shudveta.official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/shudveta" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/shudveta" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://x.com/shudveta" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-col">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./motive.html">Our Motive</a></li>
+                                <li><a href="./founders.html">Our Team</a></li>
+                                <li><a href="./timeline.html">Timeline</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-col">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="./projects.html">IPD Now</a></li>
+                                <li><a href="./jobs.html">Career Opportunities</a></li>
+                                <li><a href="./certificate-validator.html">Certificate Validator</a></li>
+                                <li><a href="./listsurvey.html">Surveys</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-col">
+                            <h4>Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li><i class="fas fa-envelope"></i> <a href="mailto:info@shudveta.in">info@shudveta.in</a></li>
+                                <li><i class="fas fa-map-marker-alt"></i> Delhi, India</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p><span id="copyright-year">2023</span> Shudveta</p>
                 </div>
             </div>
         </footer>
     </div>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const sidebar = document.getElementById('sidebar');
-        const closeBtn = document.getElementById('closeBtn');
-
-        hamburger.addEventListener('click', () => {
-            sidebar.style.width = "250px";
-        });
-
-        closeBtn.addEventListener('click', () => {
-            sidebar.style.width = "0";
-        });
-    </script>
-
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

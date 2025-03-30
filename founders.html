@@ -1,666 +1,702 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shudveta">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Meet the talented team behind Shudveta who are passionate about revolutionizing healthcare technology.">
+    <meta name="keywords" content="Shudveta team, healthcare technology team, tech innovators, healthcare developers">
+    
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2894220789338273"
      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./founders.css">
+    
+    <!-- Favicon -->
     <link rel="icon" href="./favicon.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
     <title>Shudveta - Our Team</title>
+    
     <style>
-        body, html {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+        /* Team-specific styles */
+        .team-page-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-
         
-        /* Header Styling */
-        header {
-            background-color: #002f6c;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
+        .team-section {
+            padding: 80px 0;
             position: relative;
         }
-
-        .logo {
-            height: 80px;
-            width: auto;
-            order: 1;
+        
+        .team-section.founders {
+            background-color: var(--white);
         }
-
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            order: 2;
+        
+        .team-section.members {
+            background-color: var(--bg-color);
+            position: relative;
         }
-
-        .hamburger div {
-            width: 30px;
-            height: 3px;
-            background-color: white;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .hamburger {
-                display: flex;
-                position: absolute;
-                right: 35px; /* Position it at the far right */
-                top: 57px; /* Adjust vertical position */
-            }
-
-        nav {
-            display: flex;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            margin: 0 20px;
-            font-size: 18px;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        nav a:hover {
-            color: #f1f1f1;
-            border-bottom: 2px solid #f1f1f1;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #003366;
-            color: white;
-            overflow-x: hidden;
-            transition: width 0.4s ease-in-out;
-            padding-top: 60px;
-            z-index: 1000;
-            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sidebar a {
-            text-decoration: none;
-            color: white;
-            padding: 14px 24px;
-            display: block;
-            font-size: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-bottom: 2px solid #fff;
-            transition: 0.3s;
-        }
-
-        .sidebar a:hover {
-            background-color: #ffffff;
-            color: #002f6c;
-            transform: translateX(10px);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .sidebar .close-btn {
-            font-size: 36px;
-            color: white;
-            border: none;
-            background: none;
+        
+        .team-section::after {
+            content: '';
             position: absolute;
-            top: 20px;
-            left: 25px;
-            font-weight: bold;
-            cursor: pointer;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.03));
+            pointer-events: none;
+            z-index: 1;
         }
-
-        /* Mobile View */
-        @media (max-width: 768px) {
-            header {
-                padding: 20px 15px;
-                flex-direction: column;
-                align-items: center;
-                box-shadow: none; /* Ensure no box-shadow in mobile view */
-            }
-
-            .logo {
-                height: 60px;
-            }
-
-            nav {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                margin-top: 10px;
-                padding-top: 0; /* Adjust padding to prevent space */
-            }
-
-            nav a {
-                margin: 10px 0;
-                font-size: 16px;
-            }
-
-            .hamburger {
-                display: flex;
-                position: absolute;
-                right: 15px; /* Position it at the far right */
-                top: 27px; /* Adjust vertical position */
-            }
-        }
-
-        /* Meet Our Founders Section Styling */
-        .founders-section {
-            padding: 60px 20px;
-            background-color: #ffffff;
-            color: #333333;
+        
+        .section-heading {
             text-align: center;
-            margin-top: 40px;
+            margin-bottom: 60px;
         }
-
-        .founders-section h1 {
-            font-size: 42px;
-            font-weight: 600;
-            color: #002f6c;
-            margin-bottom: 40px;
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-        }
-
-        .founders-section h2 {
-            font-size: 32px;
             font-weight: 600;
-            color: #002f6c;
-            margin-bottom: 40px;
-            text-transform: uppercase;
         }
-
-        .founder-cards {
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .founder-grid {
             display: flex;
             justify-content: center;
             gap: 60px;
-            margin-top: 40px;
             flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
         }
-
-        .founder-card {
-            background-color: #ffffff;
-            width: 350px;
-            max-width: 450px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 50px;
+        
+        .team-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
-
+        
+        .team-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .founder-card {
+            width: 380px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: var(--white);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+        
         .founder-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.18);
         }
-
-        .founder-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-bottom: 25px;
+        
+        .member-image-container,
+        .founder-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .member-image {
+            width: 120px;
+            height: 120px;
             object-fit: cover;
-            border: 4px solid #002f6c;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            margin: 30px auto 0;
+            display: block;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-
+        
+        .founder-image {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            margin: 30px auto 20px;
+            display: block;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .team-card:hover .member-image,
+        .founder-card:hover .founder-image {
+            transform: scale(1.08);
+            border-color: var(--secondary-color);
+        }
+        
+        .member-content,
+        .founder-content {
+            padding: 20px 25px 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        .founder-content {
+            padding: 0 30px 35px;
+        }
+        
+        .member-name,
+        .founder-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 15px 0 5px;
+            transition: all 0.3s ease;
+        }
+        
         .founder-name {
             font-size: 26px;
-            font-weight: bold;
-            color: #002f6c;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
-
+        
+        .member-position,
         .founder-position {
-            font-size: 20px;
-            color: #555;
+            font-size: 15px;
+            color: var(--secondary-color);
             margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 500;
         }
-
-        .founder-about {
+        
+        .founder-position {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        
+        .member-position::after,
+        .founder-position::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+        }
+        
+        .founder-position::after {
+            width: 60px;
+            height: 4px;
+        }
+        
+        .founder-bio {
             font-size: 16px;
-            line-height: 1.8;
+            line-height: 1.7;
             color: #555;
-            margin-bottom: 20px;
-            text-align: justify;
-            padding: 0 10px;
+            margin-bottom: 30px;
+            flex: 1;
         }
-
-        @media (min-width: 1024px) {
-            .founder-cards {
-                justify-content: space-evenly;
-            }
-
-            .founder-card {
-                width: 500px;
-                max-width: 500px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .founder-cards {
-                flex-direction: column;
-                align-items: center;
-                gap: 30px; /* Reduced gap between cards */
-            }
-
-            .founder-card {
-                width: 90%; /* Increased from 85% to use more screen width */
-                max-width: none;
-                padding: 20px; /* Reduced padding */
-                margin-bottom: 30px; /* Reduced margin */
-            }
-
-            .founder-image {
-                width: 150px; /* Slightly smaller image */
-                height: 150px;
-            }
-
-            .founder-name {
-                font-size: 22px; /* Slightly smaller font */
-            }
-
-            .founder-position {
-                font-size: 18px;
-            }
-
-            .founder-about {
-                font-size: 14px;
-                padding: 0 5px;
-            }
-        }
-
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-
-        .container {
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        main {
-            flex-grow: 1;
-        }
-
-        footer {
-            background-color: #000000;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 16px;
+        
+        .social-links-container {
             margin-top: auto;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
         }
-
-        footer .footer-content p {
-            margin: 5px 0;
-        }
-
-        footer .footer-content a {
-            color: #f1f1f1;
-            text-decoration: none;
-        }
-
-        footer .footer-content a:hover {
-            color: #e0e0e0;
-        }
-
-        .social-links {
+        
+        .founder-social-links {
             margin-top: 10px;
-            font-size: 20px;
+            gap: 15px;
         }
-
-        .social-links a {
-            text-decoration: none;
-            color: #002f6c;
-            margin: 0 15px;
+        
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 16px;
+            transition: all 0.3s ease;
         }
-
-        .social-links a:hover {
-            color: #f1f1f1;
+        
+        .founder-social-link {
+            width: 42px;
+            height: 42px;
+            font-size: 18px;
         }
-
-        .social-links i {
+        
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+        
+        .team-quote {
+            text-align: center;
+            max-width: 800px;
+            margin: 80px auto 0;
             font-size: 24px;
+            line-height: 1.6;
+            color: var(--primary-color);
+            font-style: italic;
+            position: relative;
+            padding: 0 40px;
         }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 20px 15px;
-                flex-direction: row; /* Change to row */
-                justify-content: space-between; /* Ensure logo and hamburger are spaced out */
-                margin-bottom: 0; /* Ensure no margin at the bottom */
-            }
-            .logo {
-                height: 60px;
-            }
-            nav {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                margin-top: 0; /* Remove any margin at the top of the nav */
-                padding: 0;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #002f6c;
-                z-index: 1000; /* Ensure it appears above other content */
-            }
-            nav a {
-                margin: 10px 0;
-                font-size: 16px;
-            }
-            .hamburger {
-                display: flex;
-                margin-top: 6%;
-                margin-right: 16px;
+        
+        .team-quote::before,
+        .team-quote::after {
+            content: '"';
+            font-size: 60px;
+            color: rgba(0, 47, 108, 0.1);
+            position: absolute;
+        }
+        
+        .team-quote::before {
+            left: 0;
+            top: -20px;
+        }
+        
+        .team-quote::after {
+            right: 0;
+            bottom: -50px;
+        }
+        
+        @media (max-width: 1100px) {
+            .founder-grid {
+                gap: 40px;
             }
             
-        }
-
-        /* Tablet View */
-        @media (max-width: 1024px) {
-            header {
-                padding: 20px 30px;
-            }
-            .logo {
-                height: 70px;
-            }
-            nav a {
-                font-size: 17px;
+            .founder-card {
+                width: 340px;
             }
         }
-        /* Additional styles for improvement */
-        .founder-card {
-            transition: transform 0.3s;
-        }
-        .founder-card:hover {
-            transform: scale(1.05);
-        }
-        /* Additional styles for improvement */
-        .founder-card {
-            transition: transform 0.3s;
-        }
-        .product-developer {
-            color: #002f6c;
-            font-weight: bolder;
-            margin-top: -5px;
-            font-size: 18px; /* Improve visibility */
-        }
-
-        .product-developer:hover {
-            color: #002f6c;
-            text-decoration: underline; /* Add hover effect */
-        }
-        .team-name{
-            font-size: 30px;
-        }
-        .founder-position {
-            font-weight: bold; /* Improve visibility of position titles */
-        }
+        
         @media (max-width: 768px) {
-            .team-card {
-                width: 90%; /* Increased from previous value */
-                max-width: none;
-                margin: 20px auto; /* Center the cards */
+            .team-section {
+                padding: 60px 0;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 30px;
+            }
+            
+            .founder-card {
+                width: 100%;
+                max-width: 320px;
+            }
+            
+            .founder-image {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .founder-content {
+                padding: 0 20px 30px;
+            }
+            
+            .founder-name {
+                font-size: 22px;
+            }
+            
+            .founder-position {
+                font-size: 16px;
+            }
+            
+            .founder-bio {
+                font-size: 15px;
+            }
+            
+            .team-quote {
+                font-size: 20px;
+                margin-top: 60px;
+                padding: 0 30px;
             }
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <div class="header-container">
+    <div class="container">
+        <!-- Header -->
+        <header>
             <img src="logo.png" alt="Shudveta Logo" class="logo">
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./motive.html">Motive</a>
+                <a href="./founders.html">Our Team</a>
+                <a href="./timeline.html">Timeline</a>
+                <a href="./jobs.html">Job Openings</a>
+                <a href="./projects.html">Our Projects</a>
+            </nav>
             <div class="hamburger" id="hamburger">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <div id="sidebar" class="sidebar">
-        <button class="close-btn" id="closeBtn">&times;</button>
-        <a href="./index.html">Home</a>
-        <a href="./motive.html">Motive</a>
-        <a href="./founders.html">Our Team</a>
-        <a href="./timeline.html">Timeline</a>
-        <a href="./jobs.html">Job Openings</a>
-        <a href="./certificate-validator.html">Certificate Validator</a>
-        <a href="./projects.html">Our Projects</a>
-        <a href="./listsurvey.html">Surveys</a>
+        <!-- Sidebar for Mobile -->
+        <div id="sidebar" class="sidebar">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            
+            <div class="sidebar-brand">
+                <img src="logo.png" alt="Shudveta Logo" class="sidebar-logo">
+                <p class="sidebar-tagline">Innovating Healthcare & Technology</p>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Main Navigation</h4>
+                <a href="./index.html"><i class="fas fa-home"></i>Home</a>
+                <a href="./motive.html"><i class="fas fa-bullseye"></i>Our Motive</a>
+                <a href="./founders.html"><i class="fas fa-users"></i>Our Team</a>
+                <a href="./timeline.html"><i class="fas fa-history"></i>Timeline</a>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Projects & Opportunities</h4>
+                <a href="./projects.html"><i class="fas fa-project-diagram"></i>Our Projects</a>
+                <a href="./jobs.html"><i class="fas fa-briefcase"></i>Job Openings</a>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>Resources</h4>
+                <a href="./certificate-validator.html"><i class="fas fa-certificate"></i>Certificate Validator</a>
+                <a href="./listsurvey.html"><i class="fas fa-poll"></i>Surveys</a>
+            </div>
+
+            <div class="sidebar-social">
+                <a href="https://www.instagram.com/shudveta.official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/shudveta" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shudveta" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/shudveta" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content animate-on-scroll">
+                    <h1>Our Team</h1>
+                    <p>The innovative minds behind Shudveta</p>
+                </div>
+            </section>
+            
+            <!-- Founders Section -->
+            <section class="team-section founders">
+                <div class="team-page-container">
+                    <div class="section-heading">
+                        <div class="section-subtitle animate-on-scroll">Leadership</div>
+                        <h2 class="section-title animate-on-scroll">The Original Rule Breakers</h2>
+                    </div>
+                    
+                    <div class="founder-grid">
+                        <!-- Founder 1 -->
+                        <div class="founder-card animate-on-scroll">
+                            <div class="founder-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEsETa7iY2uKg/profile-displayphoto-shrink_400_400/B4DZXmcItZHwAg-/0/1743327890722?e=1749081600&v=beta&t=pGb5lKwUmfmf6WQzDQCWsKWU5il7pmjKpB0eAXLA9-A" alt="Raghav Sachdev" class="founder-image">
+                            </div>
+                            <div class="founder-content">
+                                <h3 class="founder-name">Raghav Sachdev</h3>
+                                <p class="founder-position">Co-Founder & App Developer</p>
+                                <p class="founder-bio">Raghav Sachdev is a visionary entrepreneur and the driving force behind Shudveta's mission to bring technological advancements to the healthcare industry. He leverages his expertise in software development, digital marketing, and healthcare technology to create innovative solutions.</p>
+                                <div class="social-links-container founder-social-links">
+                                    <a href="https://www.instagram.com/sachdev.eloper" target="_blank" aria-label="Instagram" class="social-link founder-social-link"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/raghavsach-dev" target="_blank" aria-label="LinkedIn" class="social-link founder-social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/raghavsach-dev" target="_blank" aria-label="GitHub" class="social-link founder-social-link"><i class="fab fa-github"></i></a>
+                                    <a href="https://raghavsachdev.live/" target="_blank" aria-label="Website" class="social-link founder-social-link"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Founder 2 -->
+                        <div class="founder-card animate-on-scroll">
+                            <div class="founder-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQHAehs45wXAnw/profile-displayphoto-shrink_400_400/B56ZXmcdPKGoAg-/0/1743327974805?e=1749081600&v=beta&t=VRdA2gnLcLBf_ZWfncj9gZJHvDnFhD2Gl9acDTmRTB4" alt="Dhruvi" class="founder-image">
+                            </div>
+                            <div class="founder-content">
+                                <h3 class="founder-name">Dhruvi Mittal</h3>
+                                <p class="founder-position">Co-Founder & Web Developer</p>
+                                <p class="founder-bio">Dhruvi Mittal is a strategic leader who ensures Shudveta's operations run smoothly and efficiently. With a background in healthcare systems, project management, and a strong passion for developing impactful products, Dhruvi brings the vision to life.</p>
+                                <div class="social-links-container founder-social-links">
+                                    <a href="https://www.instagram.com/dhruvi_806" target="_blank" aria-label="Instagram" class="social-link founder-social-link"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/dhruvi-mittal-791426201/" target="_blank" aria-label="LinkedIn" class="social-link founder-social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/dhruvi2006" target="_blank" aria-label="GitHub" class="social-link founder-social-link"><i class="fab fa-github"></i></a>
+                                    <a href="https://dhruvi-resume.vercel.app/" target="_blank" aria-label="Website" class="social-link founder-social-link"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Team Members Section -->
+            <section class="team-section members">
+                <div class="team-page-container">
+                    <div class="section-heading">
+                        <div class="section-subtitle animate-on-scroll">Our People</div>
+                        <h2 class="section-title animate-on-scroll">The Hardworking Crew</h2>
+                    </div>
+                    
+                    <div class="team-grid">
+                        <!-- Team Member - Charu -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://i.ibb.co/V0G4wXPt/Charu.jpg" alt="Charu Bhoddy" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Charu Bhoddy</h3>
+                                <p class="member-position">Product Manager</p>
+                                <div class="social-links-container">
+                                    <a href="https://www.linkedin.com/in/charu-bhoddy-b8b301329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:charubhoddy@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member - Shyam -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQEUCPBDjOxXcQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1702749338423?e=1744243200&v=beta&t=silfm22XP_tzBNdtyQV1b65lGO0mFQvOiEmZTV37X4I" alt="Shyam Kumar" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Shyam Kumar</h3>
+                                <p class="member-position">Product Developer</p>
+                                <div class="social-links-container">
+                                    <a href="https://www.linkedin.com/in/shyam-kumar-b7061b288/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:shyamkumar@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member - Samarth -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D4D03AQFSQk0ojTHtpQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1686583599973?e=1744243200&v=beta&t=N80hTEN4Q3Txym3nAlA3klg-I2vcs8sMLk5AkIye_50" alt="Samarth Bhagane" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Samarth Bhagane</h3>
+                                <p class="member-position">Product Developer</p>
+                                <div class="social-links-container">
+                                    <a href="https://www.linkedin.com/in/samarth-bhagane-677a94195/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:samarthbhagane@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member - Samiksha -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D4D03AQFq2iXJ5EnejA/profile-displayphoto-shrink_100_100/B4DZPZsp6oGgAY-/0/1734524183639?e=1744243200&v=beta&t=kw5TWTBk_kKKAcZ6bsoPKyeB_QmRVrImjaoL9zfdres" alt="Samiksha Shimpi" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Samiksha Shimpi</h3>
+                                <p class="member-position">Product Developer</p>
+                                <div class="social-links-container">
+                                    <a href="https://www.linkedin.com/in/samiksha-shimpi-6a43572a4/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:samikshashimpi@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member - Jatin -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E03AQGAVCDQw9U25Q/profile-displayphoto-shrink_400_400/B4EZSC8KcoHMAk-/0/1737363599066?e=1744243200&v=beta&t=TN3wz9y4FKpJVQkiv1YLkhcw9HB1UJ6h8zb3-1_7TjY" alt="Jatin Arora" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Jatin Arora</h3>
+                                <p class="member-position">Product Developer</p>
+                                <div class="social-links-container">
+                                    <a href="https://www.linkedin.com/in/jatinaroraa/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:jatinarora@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member - Aditya -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQEiGYeTha0Row/profile-displayphoto-shrink_400_400/B56ZTFdXbfGUAg-/0/1738479597992?e=1744243200&v=beta&t=EgEdM6OolQid14prjzuy8E_1zcY962Apk6SjL2BED-k" alt="Aditya Maitreya" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Aditya Maitreya</h3>
+                                <p class="member-position">Product Developer</p>
+                                <div class="social-links-container">
+                                    <a href="http://linkedin.com/in/adityamaitreya/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:adityamaitreya@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member - Adarsh -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQHf8LFgyXkHdA/profile-displayphoto-shrink_400_400/B56ZWZnyZCHQAg-/0/1742039099792?e=1749081600&v=beta&t=ibMzmQNAH0v4xIX5L3aGP5QjhdQCI8Bxz4kEE3Z5Ji4" alt="Adarsh J" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Adarsh J</h3>
+                                <p class="member-position">Product Developer</p>
+                                <div class="social-links-container">
+                                    <a href="https://www.linkedin.com/in/adarsh-j-a44612293/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:jadarsh@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member - Vinay -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQFrCgebqIom5w/profile-displayphoto-shrink_100_100/B56ZSI7t5oGoAU-/0/1737464154638?e=1744243200&v=beta&t=82JxUnl-HrjamhwTBy6f8aVsjz8VWEPgJloxdB4x7ME" alt="Koukuntla Vinay Reddy" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Koukuntla Vinay Reddy</h3>
+                                <p class="member-position">Product Developer</p>
+                                <div class="social-links-container">
+                                    <a href="https://www.linkedin.com/in/koukuntla-vinay-reddy-b606871b0/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:vinayreddy@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member - Jayasree -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQFvAxRtJzh0eQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1725338999607?e=1744243200&v=beta&t=vuFuQlZLGfTkSqIGShmJdAuIwWIUnjQ7KmL5FVueAAk" alt="Jetti Jayasree" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Jetti Jayasree</h3>
+                                <p class="member-position">Product Developer</p>
+                                <div class="social-links-container">
+                                    <a href="https://www.linkedin.com/in/jetti-jayasree-a3a3142a3/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:jettijayasree@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member - Udhistrra -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQHt8fL_O_cpTg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1724690055168?e=1744243200&v=beta&t=j2H-2y3Xw3aCLsTGcX7wBYBvBf0TngqTzYe_8lF4WHE" alt="Udhistrra D" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Udhistrra D</h3>
+                                <p class="member-position">Product Developer</p>
+                                <div class="social-links-container">
+                                    <a href="https://www.linkedin.com/in/udhistrra-d/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:udhistrra@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member - Rajvardhan -->
+                        <div class="team-card animate-on-scroll">
+                            <div class="member-image-container">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQH-zp0-zD1Xtg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1731435322353?e=1744243200&v=beta&t=fZpBn6PF5vuUJe6cmdqmel0WAAhUSPngGllpIdFbnlw" alt="Rajvardhan Agarwal" class="member-image">
+                            </div>
+                            <div class="member-content">
+                                <h3 class="member-name">Rajvardhan Agarwal</h3>
+                                <p class="member-position">Product Developer</p>
+                                <div class="social-links-container">
+                                    <a href="https://www.linkedin.com/in/rajvardhan-agarwal-kiet/" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="mailto:rajvardhanagarwal@shudveta.in" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-quote animate-on-scroll">
+                        "Alone we can do so little; together we can do so much."
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="logo.png" alt="Shudveta Logo" class="footer-logo">
+                        <p class="footer-tagline">Revolutionizing healthcare through technology</p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/shudveta.official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/shudveta" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/shudveta" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://x.com/shudveta" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-col">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./motive.html">Our Motive</a></li>
+                                <li><a href="./founders.html">Our Team</a></li>
+                                <li><a href="./timeline.html">Timeline</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-col">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="./projects.html">IPD Now</a></li>
+                                <li><a href="./jobs.html">Career Opportunities</a></li>
+                                <li><a href="./certificate-validator.html">Certificate Validator</a></li>
+                                <li><a href="./listsurvey.html">Surveys</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-col">
+                            <h4>Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li><i class="fas fa-envelope"></i> <a href="mailto:info@shudveta.in">info@shudveta.in</a></li>
+                                <li><i class="fas fa-map-marker-alt"></i> Delhi, India</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p><span id="copyright-year">2023</span> Shudveta</p>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <!-- Meet Our Founders Section -->
-    <section class="founders-section" id="founders">
-        <h1>The Original Rule Breakers</h1>
-        <div class="founder-cards">
-            <!-- Founder 1 -->
-            <div class="founder-card">
-                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEelZj32P93Eg/profile-displayphoto-shrink_400_400/B4DZTGhLw1HAAg-/0/1738497376382?e=1744243200&v=beta&t=WGY0V4WrNxc7oSgC41lzBupWYQD90kB0Q4d1nFVPWIg" alt="Raghav Sachdev" class="founder-image">
-                <h2 class="founder-name">Raghav Sachdev</h2>
-                <p class="founder-position">Co-Founder & App Developer</p>
-                <p class="founder-about">Raghav Sachdev is a visionary entrepreneur and the driving force behind Shudveta's mission to bring technological advancements to the healthcare industry. He leverages his expertise in software development, digital marketing, and healthcare technology to create innovative solutions. His leadership is defined by a passion for improving healthcare accessibility, empathy-driven solutions, and a commitment to delivering results that matter.</p>
-                <!-- Social Media Links -->
-                <div class="social-links">
-                    <a href="https://www.instagram.com/sachdev.eloper" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/raghavsach-dev" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/raghavsach-dev" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://raghavsachdev.live/" target="_blank"><i class="fas fa-globe"></i></a>
-                </div>
-            </div>
-
-            <!-- Founder 2 -->
-            <div class="founder-card">
-                <img src="https://media.licdn.com/dms/image/v2/D5603AQFym5P04Jrb3A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729791075650?e=1743033600&v=beta&t=hJD3-w18oUchcdBWcNV_WiZ0T6TWF_KYSRESlWpDrQc" alt="Dhruvi" class="founder-image">
-                <h2 class="founder-name">Dhruvi Mittal</h2>
-                <p class="founder-position">Co-Founder & Web Developer</p>
-                <p class="founder-about">Dhruvi Mittal is a strategic leader who ensures Shudveta's operations run smoothly and efficiently. With a background in healthcare systems, project management, and a strong passion for developing impactful products, Dhruvi brings the vision to life. Her expertise in healthcare solutions, combined with a deep understanding of user needs, enables her to drive Shudveta's mission of innovation and excellence.</p>
-                <!-- Social Media Links -->
-                <div class="social-links">
-                    <a href="https://www.instagram.com/dhruvi_806" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/dhruvi-mittal-791426201/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/dhruvi2006" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://dhruvi-resume.vercel.app/" target="_blank"><i class="fas fa-globe"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Our Hardworking Team Section -->
     
-    <section class="team-section" id="team">
-        <h2>The Hardworking Crew</h2>
-        <div class="team-cards">
-        <!-- Team Member Card -->
-        
-        <div class="team-card">
-            <img src="https://i.ibb.co/V0G4wXPt/Charu.jpg" alt="Shyam Kumar" class="team-image">
-            <h3 class="team-name">Charu Bhoddy</h3>
-            <p class="product-developer">Product Manager</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/charu-bhoddy-b8b301329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:charubhoddy@shudveta.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-
-
-
-
-        <div class="team-card">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQEUCPBDjOxXcQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1702749338423?e=1744243200&v=beta&t=silfm22XP_tzBNdtyQV1b65lGO0mFQvOiEmZTV37X4I" alt="Shyam Kumar" class="team-image">
-            <h3 class="team-name">Shyam Kumar</h3>
-            <p class="product-developer">Product Developer</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/shyam-kumar-b7061b288/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:shyamkumar@shudveta.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-
-        <!-- Team Member Card -->
-        <div class="team-card">
-            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFSQk0ojTHtpQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1686583599973?e=1744243200&v=beta&t=N80hTEN4Q3Txym3nAlA3klg-I2vcs8sMLk5AkIye_50" alt="Samarth Bhagane" class="team-image">
-            <h3 class="team-name">Samarth Bhagane</h3>
-            <p class="product-developer">Product Developer</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/samarth-bhagane-677a94195/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:samarthbhagane@shudveta.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-
-         <!-- Team Member Card -->
-         <div class="team-card">
-            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFq2iXJ5EnejA/profile-displayphoto-shrink_100_100/B4DZPZsp6oGgAY-/0/1734524183639?e=1744243200&v=beta&t=kw5TWTBk_kKKAcZ6bsoPKyeB_QmRVrImjaoL9zfdres" alt="Samiksha Shimpi" class="team-image">
-            <h3 class="team-name">Samiksha Shimpi</h3>
-            <p class="product-developer">Product Developer</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/samiksha-shimpi-6a43572a4/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:samikshashimpi@shudveta.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-
-
-        
-         <!-- Team Member Card -->
-         <div class="team-card">
-            <img src="https://media.licdn.com/dms/image/v2/D4E03AQGAVCDQw9U25Q/profile-displayphoto-shrink_400_400/B4EZSC8KcoHMAk-/0/1737363599066?e=1744243200&v=beta&t=TN3wz9y4FKpJVQkiv1YLkhcw9HB1UJ6h8zb3-1_7TjY" alt="Jatin Arora" class="team-image">
-            <h3 class="team-name">Jatin Arora</h3>
-            <p class="product-developer">Product Developer</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/jatinaroraa/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:jatinarora@shudveta.in "><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-
-         <!-- Team Member Card -->
-         <div class="team-card">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQEiGYeTha0Row/profile-displayphoto-shrink_400_400/B56ZTFdXbfGUAg-/0/1738479597992?e=1744243200&v=beta&t=EgEdM6OolQid14prjzuy8E_1zcY962Apk6SjL2BED-k" alt="Aditya Maitreya " class="team-image">
-            <h3 class="team-name">Aditya Maitreya </h3>
-            <p class="product-developer">Product Developer</p>
-            <div class="social-links">
-                <a href="http://linkedin.com/in/adityamaitreya/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:adityamaitreya@shudveta.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-
-         <!-- Team Member Card -->
-
-         <!-- Team Member Card -->
-         <div class="team-card">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQFg8uHkD2dorQ/profile-displayphoto-shrink_400_400/B56ZTgZbbSGQAg-/0/1738931550680?e=1744848000&v=beta&t=K6NEB2BGuv2Jm6abiycVYUB3N9yvgCojBBGBwoF9WIA" alt="Adarsh J" class="team-image">
-            <h3 class="team-name">Adarsh J</h3>
-            <p class="product-developer">Product Developer</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/adarsh-j-a44612293/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:jadarsh@shudveta.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-
-         <!-- Team Member Card -->
-         <div class="team-card">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQFrCgebqIom5w/profile-displayphoto-shrink_100_100/B56ZSI7t5oGoAU-/0/1737464154638?e=1744243200&v=beta&t=82JxUnl-HrjamhwTBy6f8aVsjz8VWEPgJloxdB4x7ME" alt="Koukuntla Vinay Reddy" class="team-image">
-            <h3 class="team-name">Koukuntla Vinay Reddy</h3>
-            <p class="product-developer">Product Developer</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/koukuntla-vinay-reddy-b606871b0/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:vinayreddy@shudveta.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-        
-         <!-- Team Member Card -->
-         <div class="team-card">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQFvAxRtJzh0eQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1725338999607?e=1744243200&v=beta&t=vuFuQlZLGfTkSqIGShmJdAuIwWIUnjQ7KmL5FVueAAk" alt="Jetti Jayasree" class="team-image">
-            <h3 class="team-name">Jetti Jayasree</h3>
-            <p class="product-developer">Product Developer</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/jetti-jayasree-a3a3142a3/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:jettijayasree@shudveta.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-        
-         <!-- Team Member Card -->
-         <div class="team-card">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQHt8fL_O_cpTg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1724690055168?e=1744243200&v=beta&t=j2H-2y3Xw3aCLsTGcX7wBYBvBf0TngqTzYe_8lF4WHE" alt="Udhistrra D" class="team-image">
-            <h3 class="team-name">Udhistrra D</h3>
-            <p class="product-developer">Product Developer</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/udhistrra-d/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:udhistrra@shudveta.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div> 
-
-
-        <!-- Team Member Card -->
-        <div class="team-card">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQH-zp0-zD1Xtg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1731435322353?e=1744243200&v=beta&t=fZpBn6PF5vuUJe6cmdqmel0WAAhUSPngGllpIdFbnlw" alt="Rajvardhan Agarwal" class="team-image">
-            <h3 class="team-name">Rajvardhan Agarwal</h3>
-            <p class="product-developer">Product Developer</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/rajvardhan-agarwal-kiet/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:rajvardhanagarwal@shudveta.in"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div> 
-
-        <!-- Add more team members in the same structure -->
-
-    </div>
-</section>
-
-
-
-
-
-    <footer>
-        <div class="footer-content">
-            <p>2025 Shudveta, All Rights Reserved</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/shudveta.official/" target="_blank"><i style="color: white;" class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/shudveta" target="_blank"><i style="color: white;" class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/shudveta" target="_blank"><i style="color: white;" class="fab fa-github"></i></a>
-                <a href="https://x.com/shudveta" target="_blank"><i style="color: white;" class="fab fa-twitter"></i></a>
-
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const sidebar = document.getElementById('sidebar');
-        const closeBtn = document.getElementById('closeBtn');
-
-        hamburger.addEventListener('click', () => {
-            sidebar.style.width = "250px";
-        });
-
-        closeBtn.addEventListener('click', () => {
-            sidebar.style.width = "0";
-        });
-    </script>
-
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
