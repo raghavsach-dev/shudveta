@@ -33,6 +33,41 @@
     <link rel="stylesheet" href="styles.css">
     
     <title>Shudveta</title>
+    <style>
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .floating-whatsapp:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .floating-whatsapp i {
+            font-size: 24px;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-whatsapp {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -81,6 +116,10 @@
                 <h4>Resources</h4>
                 <a href="./certificate-validator.html"><i class="fas fa-certificate"></i>Certificate Validator</a>
                 <a href="./listsurvey.html"><i class="fas fa-poll"></i>Surveys</a>
+                <a href="https://wa.me/9211291306" class="sidebar-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Try Dr. Healio (Beta)
+                </a>
             </div>
 
             <div class="sidebar-social">
@@ -206,6 +245,12 @@
             </div>
         </footer>
     </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919211291306" class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        Try Dr. Healio (Beta)
+    </a>
 
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
