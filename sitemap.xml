@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://shudveta.in/</loc>
-  <lastmod>2025-02-04T15:26:23+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>https://shudveta.in/</loc>
+	<lastmod>2025-04-23T18:17:32+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://shudveta.in/motive</loc>
-  <lastmod>2025-02-04T15:26:23+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://shudveta.in/motive</loc>
+	<lastmod>2025-04-23T18:17:33+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://shudveta.in/founders</loc>
-  <lastmod>2025-02-04T15:26:23+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://shudveta.in/founders</loc>
+	<lastmod>2025-04-23T18:17:34+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://shudveta.in/jobs</loc>
-  <lastmod>2025-02-04T15:26:23+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://shudveta.in/timeline</loc>
+	<lastmod>2025-04-23T18:17:34+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://shudveta.in/projects</loc>
-  <lastmod>2025-02-04T15:26:23+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://shudveta.in/jobs</loc>
+	<lastmod>2025-04-23T18:17:34+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
-
-
+<url>
+	<loc>https://shudveta.in/projects</loc>
+	<lastmod>2025-04-23T18:17:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shudveta.in/certificate-validator</loc>
+	<lastmod>2025-04-23T18:17:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shudveta.in/listsurvey</loc>
+	<lastmod>2025-04-23T18:17:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shudveta.in/countdown</loc>
+	<lastmod>2025-04-23T18:17:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
 </urlset>
