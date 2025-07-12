@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shudveta">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Delete your IPD Now account securely with OTP verification.">
+    <meta name="keywords" content="IPD Now, account deletion, healthcare, secure">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    
+    <title>IPD Now - Account Deletion</title>
+    
+    <style>
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 30px 20px 20px 20px;
+            margin: 0;
+            background: linear-gradient(135deg, var(--white) 0%, #f8f9fa 100%);
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+            filter: none;
+            box-shadow: none;
+            transition: var(--transition);
+        }
+
+        .logo.shudveta-logo {
+            filter: brightness(0);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-divider {
+            width: 2px;
+            height: 50px;
+            background: var(--border-color, #ddd);
+        }
+        
+        .deletion-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px 40px 80px 40px;
+            position: relative;
+            min-height: calc(100vh - 70px);
+        }
+        
+        .deletion-container {
+            max-width: 650px;
+            width: 100%;
+            margin: 40px auto 0;
+            background: var(--white);
+            border-radius: 24px;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.08),
+                0 4px 16px rgba(0, 0, 0, 0.04),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            padding: 60px 50px 50px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .deletion-container:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 32px 64px rgba(0, 0, 0, 0.12),
+                0 8px 24px rgba(0, 0, 0, 0.08),
+                0 0 0 1px rgba(255, 255, 255, 0.15);
+        }
+        
+        .deletion-icon {
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #dc3545 50%, #c82333 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            color: var(--white);
+            position: absolute;
+            top: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 
+                0 20px 40px rgba(220, 53, 69, 0.25),
+                0 8px 16px rgba(220, 53, 69, 0.15),
+                inset 0 2px 4px rgba(255, 255, 255, 0.2);
+            z-index: 1;
+            transition: all 0.3s ease;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .deletion-container:hover .deletion-icon {
+            transform: translateX(-50%) scale(1.05);
+            box-shadow: 
+                0 25px 50px rgba(220, 53, 69, 0.3),
+                0 12px 24px rgba(220, 53, 69, 0.2),
+                inset 0 2px 4px rgba(255, 255, 255, 0.3);
+        }
+        
+        .deletion-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-top: 50px;
+            margin-bottom: 16px;
+            text-align: center;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .deletion-description {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #6c757d;
+            font-size: 17px;
+            line-height: 1.7;
+            font-weight: 400;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .app-info {
+            background: linear-gradient(135deg, rgba(0, 47, 108, 0.05) 0%, rgba(0, 51, 102, 0.02) 100%);
+            border: 1px solid rgba(0, 47, 108, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .app-info p {
+            margin: 8px 0;
+            font-size: 15px;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .deletion-steps-info {
+            background: linear-gradient(135deg, rgba(0, 47, 108, 0.03) 0%, rgba(0, 51, 102, 0.01) 100%);
+            border: 1px solid rgba(0, 47, 108, 0.08);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .deletion-steps-info h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .deletion-steps-info ol {
+            list-style: none;
+            counter-reset: step-counter;
+            padding: 0;
+        }
+        
+        .deletion-steps-info ol li {
+            counter-increment: step-counter;
+            margin-bottom: 12px;
+            padding-left: 40px;
+            position: relative;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #495057;
+        }
+        
+        .deletion-steps-info ol li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        
+        .data-retention-info {
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(233, 236, 239, 0.4) 100%);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            padding: 28px;
+            margin-top: 40px;
+            margin-bottom: 32px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .data-retention-info h4 {
+            color: var(--primary-color);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid rgba(0, 47, 108, 0.1);
+            padding-bottom: 12px;
+        }
+        
+        .retention-section {
+            margin-bottom: 24px;
+        }
+        
+        .retention-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .retention-section h5 {
+            color: var(--secondary-color);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .retention-section h5::before {
+            content: '';
+            width: 4px;
+            height: 16px;
+            background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 2px;
+        }
+        
+        .retention-section ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .retention-section ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #495057;
+        }
+        
+        .retention-section ul li strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.08) 0%, rgba(255, 193, 7, 0.03) 100%);
+            border: 1px solid rgba(255, 193, 7, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            backdrop-filter: blur(5px);
+            box-shadow: 
+                0 8px 16px rgba(255, 193, 7, 0.08),
+                0 2px 4px rgba(255, 193, 7, 0.04);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .warning-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #ffc107 0%, #ff8f00 100%);
+            border-radius: 0 2px 2px 0;
+        }
+        
+        .warning-icon {
+            font-size: 24px;
+            color: #ffc107;
+            margin-top: 2px;
+        }
+        
+        .warning-text {
+            font-size: 15px;
+            color: #856404;
+            line-height: 1.5;
+        }
+        
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        
+        .input-group i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+            font-size: 18px;
+            transition: var(--transition);
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 20px 22px 20px 56px;
+            font-size: 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 14px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: inherit;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            font-weight: 500;
+        }
+        
+        .input-group input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 
+                0 0 0 4px rgba(0, 47, 108, 0.1),
+                0 4px 12px rgba(0, 47, 108, 0.08);
+            background: var(--white);
+            transform: translateY(-1px);
+        }
+        
+        .input-group input:focus + i {
+            color: var(--primary-color);
+        }
+        
+        .otp-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        
+        .otp-input {
+            width: 56px;
+            height: 64px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            color: var(--primary-color);
+        }
+        
+        .otp-input::-webkit-outer-spin-button,
+        .otp-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        .otp-input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 
+                0 0 0 4px rgba(0, 47, 108, 0.1),
+                0 4px 12px rgba(0, 47, 108, 0.08);
+            background: var(--white);
+            transform: translateY(-2px) scale(1.05);
+        }
+        
+        .action-btn {
+            width: 100%;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            box-shadow: 
+                0 8px 16px rgba(0, 47, 108, 0.15),
+                0 2px 4px rgba(0, 47, 108, 0.1);
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .action-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .action-btn:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 12px 24px rgba(0, 47, 108, 0.2),
+                0 4px 8px rgba(0, 47, 108, 0.15);
+        }
+        
+        .action-btn:hover:not(:disabled)::before {
+            left: 100%;
+        }
+        
+        .action-btn:active:not(:disabled) {
+            transform: translateY(-1px);
+        }
+        
+        .action-btn:disabled {
+            background: linear-gradient(135deg, #999 0%, #777 100%);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .danger-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #dc3545 50%, #c82333 100%);
+            box-shadow: 
+                0 8px 16px rgba(220, 53, 69, 0.15),
+                0 2px 4px rgba(220, 53, 69, 0.1);
+        }
+        
+        .danger-btn:hover:not(:disabled) {
+            box-shadow: 
+                0 12px 24px rgba(220, 53, 69, 0.25),
+                0 4px 8px rgba(220, 53, 69, 0.15);
+        }
+        
+        .secondary-btn {
+            background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 
+                0 4px 8px rgba(108, 117, 125, 0.15),
+                0 1px 2px rgba(108, 117, 125, 0.1);
+        }
+        
+        .secondary-btn:hover {
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 8px 16px rgba(108, 117, 125, 0.2),
+                0 2px 4px rgba(108, 117, 125, 0.15);
+        }
+        
+        .step-indicator {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+        
+        .step {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+            color: #6c757d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            margin: 0 12px;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+        }
+        
+        .step.active {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            transform: scale(1.1);
+            box-shadow: 
+                0 8px 16px rgba(0, 47, 108, 0.25),
+                0 4px 8px rgba(0, 47, 108, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .step.completed {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: var(--white);
+            box-shadow: 
+                0 6px 12px rgba(40, 167, 69, 0.25),
+                0 3px 6px rgba(40, 167, 69, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 24px;
+            height: 3px;
+            background: linear-gradient(90deg, #dee2e6 0%, #e9ecef 100%);
+            transform: translateY(-50%);
+            border-radius: 2px;
+        }
+        
+        .step:last-child::after {
+            display: none;
+        }
+        
+        .step.completed::after {
+            background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+        }
+        
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top: 2px solid currentColor;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .success-message {
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.08) 0%, rgba(32, 201, 151, 0.04) 100%);
+            border: 1px solid rgba(40, 167, 69, 0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            color: #155724;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                0 16px 32px rgba(40, 167, 69, 0.1),
+                0 4px 8px rgba(40, 167, 69, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .success-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+        }
+        
+        .success-message i {
+            font-size: 64px;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .success-message h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #155724;
+        }
+        
+        .success-message p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #155724;
+            opacity: 0.9;
+        }
+        
+        .error-message {
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.08) 0%, rgba(255, 107, 107, 0.04) 100%);
+            border: 1px solid rgba(220, 53, 69, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            color: #721c24;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                0 12px 24px rgba(220, 53, 69, 0.1),
+                0 3px 6px rgba(220, 53, 69, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .error-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #dc3545 0%, #ff6b6b 100%);
+        }
+        
+        .error-message i {
+            font-size: 28px;
+            background: linear-gradient(135deg, #dc3545 0%, #ff6b6b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-right: 12px;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .resend-timer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+        
+        .resend-btn {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+        
+        .resend-btn:hover {
+            color: var(--secondary-color);
+        }
+        
+        .resend-btn:disabled {
+            color: #6c757d;
+            cursor: not-allowed;
+            text-decoration: none;
+        }
+        
+        /* Tablet Styles */
+        @media (max-width: 1024px) {
+            .deletion-container {
+                max-width: 500px;
+                padding: 45px 30px;
+            }
+            
+            .deletion-title {
+                font-size: 30px;
+            }
+            
+            .deletion-description {
+                font-size: 15px;
+            }
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: row;
+                gap: 20px;
+                padding: 25px 20px;
+                margin: 0 0 15px 0;
+            }
+
+            .logo {
+                height: 45px;
+            }
+
+            .logo-divider {
+                height: 40px;
+                width: 1px;
+            }
+            
+            .deletion-section {
+                padding: 15px 15px 50px 15px;
+                min-height: calc(100vh - 85px);
+            }
+            
+            .deletion-container {
+                padding: 40px 25px 35px;
+                margin: 20px auto 0;
+                border-radius: 20px;
+                max-width: 95%;
+            }
+            
+            .deletion-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+                top: -50px;
+            }
+            
+            .deletion-title {
+                font-size: 24px;
+                margin-top: 35px;
+                margin-bottom: 15px;
+                line-height: 1.2;
+            }
+            
+            .deletion-description {
+                font-size: 14px;
+                margin-bottom: 25px;
+                line-height: 1.5;
+            }
+            
+            .app-info {
+                padding: 16px;
+                margin-bottom: 20px;
+            }
+            
+            .app-info p {
+                font-size: 14px;
+                margin: 6px 0;
+            }
+            
+            .deletion-steps-info {
+                padding: 20px;
+                margin-bottom: 25px;
+            }
+            
+            .deletion-steps-info h3 {
+                font-size: 18px;
+                margin-bottom: 14px;
+            }
+            
+            .deletion-steps-info ol li {
+                font-size: 14px;
+                padding-left: 35px;
+                margin-bottom: 10px;
+            }
+            
+            .deletion-steps-info ol li::before {
+                width: 24px;
+                height: 24px;
+                font-size: 12px;
+            }
+            
+            .data-retention-info {
+                padding: 20px;
+                margin-top: 30px;
+                margin-bottom: 25px;
+            }
+            
+            .data-retention-info h4 {
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+            
+            .retention-section h5 {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            
+            .retention-section ul li {
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+            
+            .warning-box {
+                padding: 15px;
+                margin-bottom: 20px;
+                border-radius: 8px;
+            }
+            
+            .warning-text {
+                font-size: 13px;
+            }
+            
+            .step-indicator {
+                margin-bottom: 25px;
+            }
+            
+            .step {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+                margin: 0 8px;
+            }
+            
+            .step::after {
+                width: 16px;
+            }
+            
+            .input-group {
+                margin-bottom: 20px;
+            }
+            
+            .input-group input {
+                padding: 15px 18px 15px 50px;
+                font-size: 16px;
+                border-radius: 10px;
+            }
+            
+            .input-group i {
+                font-size: 16px;
+                left: 18px;
+            }
+            
+            .otp-group {
+                gap: 6px;
+                margin-bottom: 20px;
+            }
+            
+            .otp-input {
+                width: 42px;
+                height: 50px;
+                font-size: 18px;
+                border-radius: 6px;
+            }
+            
+            .action-btn {
+                padding: 15px;
+                font-size: 15px;
+                border-radius: 10px;
+                margin-bottom: 12px;
+            }
+            
+            .secondary-btn {
+                padding: 12px;
+                font-size: 14px;
+                border-radius: 8px;
+            }
+            
+            .success-message,
+            .error-message {
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+            
+            .success-message i {
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+            
+            .success-message h3 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            
+            .success-message p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            
+            .resend-timer {
+                font-size: 13px;
+                margin-top: 10px;
+            }
+            
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 50px 20px 30px;
+            }
+            
+            .footer-brand {
+                text-align: center;
+            }
+            
+            .footer-links {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+        
+        /* Small Mobile Styles */
+        @media (max-width: 480px) {
+            .header {
+                gap: 15px;
+                padding: 20px 15px;
+                margin: 0 0 10px 0;
+            }
+
+            .logo {
+                height: 40px;
+            }
+
+            .logo-divider {
+                height: 35px;
+            }
+            
+            .deletion-section {
+                padding: 10px 10px 40px 10px;
+            }
+            
+            .deletion-container {
+                padding: 25px 15px;
+                border-radius: 12px;
+            }
+            
+            .deletion-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 32px;
+                top: -40px;
+            }
+            
+            .deletion-title {
+                font-size: 20px;
+                margin-top: 25px;
+                margin-bottom: 12px;
+            }
+            
+            .deletion-description {
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+            
+            .app-info {
+                padding: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .app-info p {
+                font-size: 13px;
+                margin: 4px 0;
+            }
+            
+            .deletion-steps-info {
+                padding: 16px;
+                margin-bottom: 20px;
+            }
+            
+            .deletion-steps-info h3 {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+            
+            .deletion-steps-info ol li {
+                font-size: 13px;
+                padding-left: 30px;
+                margin-bottom: 8px;
+            }
+            
+            .deletion-steps-info ol li::before {
+                width: 20px;
+                height: 20px;
+                font-size: 11px;
+            }
+            
+            .data-retention-info {
+                padding: 16px;
+                margin-top: 25px;
+                margin-bottom: 20px;
+            }
+            
+            .data-retention-info h4 {
+                font-size: 16px;
+                margin-bottom: 14px;
+            }
+            
+            .retention-section {
+                margin-bottom: 18px;
+            }
+            
+            .retention-section h5 {
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+            
+            .retention-section ul li {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+            
+            .warning-box {
+                padding: 12px;
+                margin-bottom: 15px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .warning-icon {
+                margin-bottom: 8px;
+                margin-top: 0;
+            }
+            
+            .warning-text {
+                font-size: 12px;
+            }
+            
+            .step-indicator {
+                margin-bottom: 20px;
+            }
+            
+            .step {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+                margin: 0 6px;
+            }
+            
+            .step::after {
+                width: 12px;
+            }
+            
+            .input-group input {
+                padding: 12px 15px 12px 45px;
+                font-size: 16px;
+            }
+            
+            .input-group i {
+                font-size: 14px;
+                left: 15px;
+            }
+            
+            .otp-group {
+                gap: 4px;
+                margin-bottom: 15px;
+            }
+            
+            .otp-input {
+                width: 38px;
+                height: 45px;
+                font-size: 16px;
+            }
+            
+            .action-btn {
+                padding: 12px;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            
+            .secondary-btn {
+                padding: 10px;
+                font-size: 13px;
+            }
+            
+            .success-message,
+            .error-message {
+                padding: 15px;
+                margin-bottom: 12px;
+            }
+            
+            .success-message i {
+                font-size: 28px;
+                margin-bottom: 8px;
+            }
+            
+            .success-message h3 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+            
+            .success-message p {
+                font-size: 13px;
+            }
+            
+            .resend-timer {
+                font-size: 12px;
+                margin-top: 8px;
+            }
+            
+            .footer-main {
+                padding: 40px 15px 25px;
+            }
+            
+            .footer-links {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .footer-col h4 {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            
+            .footer-col ul li a {
+                font-size: 14px;
+            }
+        }
+        
+        /* Very Small Mobile Styles */
+        @media (max-width: 360px) {
+            .deletion-container {
+                padding: 20px 12px;
+            }
+            
+            .deletion-title {
+                font-size: 18px;
+            }
+            
+            .otp-input {
+                width: 35px;
+                height: 42px;
+                font-size: 15px;
+            }
+            
+            .action-btn {
+                padding: 10px;
+                font-size: 13px;
+            }
+            
+            .warning-text {
+                font-size: 11px;
+            }
+        }
+        
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .action-btn {
+                padding: 16px;
+                font-size: 16px;
+            }
+            
+            .input-group input {
+                padding: 16px 20px 16px 55px;
+                font-size: 16px;
+            }
+            
+            .otp-input {
+                padding: 8px;
+                font-size: 18px;
+            }
+            
+            .secondary-btn {
+                padding: 14px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <a href="../index.html">
+                <img src="../logo.png" 
+                     alt="Shudveta IT Solutions" 
+                     class="logo shudveta-logo"
+                     onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\'><rect width=\'100%\' height=\'100%\' fill=\'%23333\'/><text x=\'50%\' y=\'50%\' font-size=\'14\' text-anchor=\'middle\' fill=\'%23fff\'>Shudveta</text></svg>'">
+            </a>
+            <div class="logo-divider"></div>
+            <a href="../projects.html">
+                <img src="../applogo.jpeg" 
+                     alt="IPD Now" 
+                     class="logo"
+                     onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\'><rect width=\'100%\' height=\'100%\' fill=\'%23f0f0f0\'/><text x=\'50%\' y=\'50%\' font-size=\'14\' text-anchor=\'middle\' fill=\'%23666\'>IPD Now</text></svg>'">
+            </a>
+        </header>
+        
+        <!-- Main Content -->
+        <main>
+            <!-- Account Deletion Section -->
+            <section class="deletion-section">
+                <div class="deletion-container">
+                    <div class="deletion-icon">
+                        <i class="fas fa-user-slash"></i>
+                    </div>
+                    
+                    <h1 class="deletion-title">Delete IPD Now Account</h1>
+                    
+                    <div class="app-info">
+                        <p><strong>App:</strong> IPD Now - Hospital Management System</p>
+                        <p><strong>Developer:</strong> Shudveta IT Solutions</p>
+                    </div>
+                    
+                    <!-- Step Indicator -->
+                    <div class="step-indicator">
+                        <div class="step active" id="step1">1</div>
+                        <div class="step" id="step2">2</div>
+                        <div class="step" id="step3">3</div>
+                    </div>
+                    
+                    <div class="deletion-steps-info">
+                        <h3>Account Deletion Process</h3>
+                        <ol>
+                            <li><strong>Email Verification:</strong> Enter your registered email address</li>
+                            <li><strong>OTP Confirmation:</strong> Verify the 6-digit code sent to your email</li>
+                            <li><strong>Account Removal:</strong> Your account and data will be permanently deleted</li>
+                        </ol>
+                    </div>
+                    
+                    <!-- Step 1: Email Input -->
+                    <div id="email-step" class="step-content">
+                        <p class="deletion-description">
+                            Enter your IPD Now account email address to initiate the deletion process. We'll send you a verification code to confirm your identity.
+                        </p>
+                        
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle warning-icon"></i>
+                            <div class="warning-text">
+                                <strong>Warning:</strong> Account deletion is permanent and cannot be undone. All your data including medical history, Healio chats, appointment history, location history will be permanently deleted from our servers.
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="email" id="email-input" placeholder="Enter your account email" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        
+                        <button class="action-btn" id="send-otp-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Verification Code
+                        </button>
+                        
+                        <a href="../projects.html" class="secondary-btn">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to IPD Now
+                        </a>
+                        
+                        <!-- Data Deletion & Retention Policy -->
+                        <div class="data-retention-info">
+                            <h4>Data Deletion & Retention Policy</h4>
+                            <div class="retention-section">
+                                <h5>Data That Will Be Permanently Deleted:</h5>
+                                <ul>
+                                    <li>Personal profile information (name, email, phone number)</li>
+                                    <li>Medical history and health records</li>
+                                    <li>Dr. Healio chat conversations and AI interactions</li>
+                                    <li>Appointment history and scheduling data</li>
+                                    <li>Location history and hospital check-ins</li>
+                                    <li>Preferences and app settings</li>
+                                    <li>Uploaded documents and images</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="retention-section">
+                                <h5>Data Retention Period:</h5>
+                                <ul>
+                                    <li><strong>Immediate Deletion:</strong> Most personal data is deleted within 24 hours</li>
+                                    <li><strong>Legal Compliance:</strong> Some anonymized transaction logs may be retained for up to 90 days for legal and security purposes</li>
+                                    <li><strong>Backup Systems:</strong> Complete removal from backup systems may take up to 30 days</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="retention-section">
+                                <h5>Data That May Be Retained:</h5>
+                                <ul>
+                                    <li>Anonymized usage analytics (no personal identifiers)</li>
+                                    <li>System logs required for security and fraud prevention</li>
+                                    <li>Data required by law for regulatory compliance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: OTP Verification -->
+                    <div id="otp-step" class="step-content hidden">
+                        <p class="deletion-description">
+                            We've sent a 6-digit verification code to your email. Enter the code below to verify your identity.
+                        </p>
+                        
+                        <div class="otp-group">
+                            <input type="tel" class="otp-input" maxlength="1" data-index="0" pattern="[0-9]" inputmode="numeric">
+                            <input type="tel" class="otp-input" maxlength="1" data-index="1" pattern="[0-9]" inputmode="numeric">
+                            <input type="tel" class="otp-input" maxlength="1" data-index="2" pattern="[0-9]" inputmode="numeric">
+                            <input type="tel" class="otp-input" maxlength="1" data-index="3" pattern="[0-9]" inputmode="numeric">
+                            <input type="tel" class="otp-input" maxlength="1" data-index="4" pattern="[0-9]" inputmode="numeric">
+                            <input type="tel" class="otp-input" maxlength="1" data-index="5" pattern="[0-9]" inputmode="numeric">
+                        </div>
+                        
+                        <button class="action-btn danger-btn" id="verify-otp-btn">
+                            <i class="fas fa-shield-alt"></i>
+                            Verify & Delete Account
+                        </button>
+                        
+                        <div class="resend-timer">
+                            <span id="timer-text">Resend code in <span id="countdown">60</span> seconds</span>
+                            <button class="resend-btn hidden" id="resend-btn">Resend Code</button>
+                        </div>
+                        
+                        <button class="secondary-btn" id="back-to-email-btn">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Email
+                        </button>
+                        
+                        <!-- Data Deletion & Retention Policy -->
+                        <div class="data-retention-info">
+                            <h4>Data Deletion & Retention Policy</h4>
+                            <div class="retention-section">
+                                <h5>Data That Will Be Permanently Deleted:</h5>
+                                <ul>
+                                    <li>Personal profile information (name, email, phone number)</li>
+                                    <li>Medical history and health records</li>
+                                    <li>Dr. Healio chat conversations and AI interactions</li>
+                                    <li>Appointment history and scheduling data</li>
+                                    <li>Location history and hospital check-ins</li>
+                                    <li>Preferences and app settings</li>
+                                    <li>Uploaded documents and images</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="retention-section">
+                                <h5>Data Retention Period:</h5>
+                                <ul>
+                                    <li><strong>Immediate Deletion:</strong> Most personal data is deleted within 24 hours</li>
+                                    <li><strong>Legal Compliance:</strong> Some anonymized transaction logs may be retained for up to 90 days for legal and security purposes</li>
+                                    <li><strong>Backup Systems:</strong> Complete removal from backup systems may take up to 30 days</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="retention-section">
+                                <h5>Data That May Be Retained:</h5>
+                                <ul>
+                                    <li>Anonymized usage analytics (no personal identifiers)</li>
+                                    <li>System logs required for security and fraud prevention</li>
+                                    <li>Data required by law for regulatory compliance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Success/Error Messages -->
+                    <div id="result-step" class="step-content hidden">
+                        <div id="success-message" class="success-message hidden">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Account Deletion Successful</h3>
+                            <p>Your <strong>IPD Now</strong> account (developed by <strong>Shudveta IT Solutions</strong>) has been successfully deleted.</p>
+                            <p>All your personal data has been permanently removed from our servers within 24 hours. Backup systems will complete removal within 30 days as outlined in our retention policy.</p>
+                            <p>Thank you for using IPD Now. We hope to serve you again in the future.</p>
+                        </div>
+                        
+                        <div id="error-message" class="error-message hidden">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span id="error-text">Something went wrong. Please try again.</span>
+                        </div>
+                        
+                        <a href="../index.html" class="secondary-btn">
+                            <i class="fas fa-home"></i>
+                            Back to Home
+                        </a>
+                        
+                        <!-- Data Deletion & Retention Policy -->
+                        <div class="data-retention-info">
+                            <h4>Data Deletion & Retention Policy</h4>
+                            <div class="retention-section">
+                                <h5>Data That Will Be Permanently Deleted:</h5>
+                                <ul>
+                                    <li>Personal profile information (name, email, phone number)</li>
+                                    <li>Medical history and health records</li>
+                                    <li>Dr. Healio chat conversations and AI interactions</li>
+                                    <li>Appointment history and scheduling data</li>
+                                    <li>Location history and hospital check-ins</li>
+                                    <li>Preferences and app settings</li>
+                                    <li>Uploaded documents and images</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="retention-section">
+                                <h5>Data Retention Period:</h5>
+                                <ul>
+                                    <li><strong>Immediate Deletion:</strong> Most personal data is deleted within 24 hours</li>
+                                    <li><strong>Legal Compliance:</strong> Some anonymized transaction logs may be retained for up to 90 days for legal and security purposes</li>
+                                    <li><strong>Backup Systems:</strong> Complete removal from backup systems may take up to 30 days</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="retention-section">
+                                <h5>Data That May Be Retained:</h5>
+                                <ul>
+                                    <li>Anonymized usage analytics (no personal identifiers)</li>
+                                    <li>System logs required for security and fraud prevention</li>
+                                    <li>Data required by law for regulatory compliance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="../logo.png" alt="Shudveta Logo" class="footer-logo">
+                        <p class="footer-tagline">Revolutionizing healthcare through technology</p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/shudveta.official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/shudveta" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/shudveta" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://x.com/shudveta" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-col">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../motive.html">Our Motive</a></li>
+                                <li><a href="../founders.html">Our Team</a></li>
+                                <li><a href="../timeline.html">Timeline</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-col">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="../projects.html">IPD Now</a></li>
+                                <li><a href="../jobs.html">Career Opportunities</a></li>
+                                <li><a href="../certificate-validator.html">Certificate Validator</a></li>
+                                <li><a href="../listsurvey.html">Surveys</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-col">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="./privacypolicy.html">Privacy Policy</a></li>
+                                <li><a href="./termsandconditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p><span id="copyright-year">2024</span> Shudveta</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Configuration - Airtable credentials
+        const AIRTABLE_CONFIG = {
+            apiKey: 'patEdQku642eop90a.cd2ee6c556d5c0c99a15966e7cbdfb88c6c1588d282cac988f0ddb92ee5ced99', // Personal Access Token
+            baseId: 'appNvwTL7UD7Do0AP', // Base ID
+            otpTableName: 'Deletion_Requests', // OTP table name
+            deletionTableName: 'Confirm_Deletions', // Deletion confirmation table name
+        };
+
+        // Global variables
+        let currentStep = 1;
+        let userEmail = '';
+        let generatedOTP = '';
+        let countdownTimer;
+        let resendCountdown = 60;
+
+        // DOM elements
+        const emailStep = document.getElementById('email-step');
+        const otpStep = document.getElementById('otp-step');
+        const resultStep = document.getElementById('result-step');
+        const emailInput = document.getElementById('email-input');
+        const sendOtpBtn = document.getElementById('send-otp-btn');
+        const verifyOtpBtn = document.getElementById('verify-otp-btn');
+        const backToEmailBtn = document.getElementById('back-to-email-btn');
+        const resendBtn = document.getElementById('resend-btn');
+        const timerText = document.getElementById('timer-text');
+        const countdownSpan = document.getElementById('countdown');
+        const otpInputs = document.querySelectorAll('.otp-input');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+        const errorText = document.getElementById('error-text');
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            setupEventListeners();
+            setupOTPInputs();
+        });
+
+        function setupEventListeners() {
+            sendOtpBtn.addEventListener('click', handleSendOTP);
+            verifyOtpBtn.addEventListener('click', handleVerifyOTP);
+            backToEmailBtn.addEventListener('click', goBackToEmail);
+            resendBtn.addEventListener('click', handleResendOTP);
+            
+            // Enter key listeners
+            emailInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    handleSendOTP();
+                }
+            });
+        }
+
+        function setupOTPInputs() {
+            otpInputs.forEach((input, index) => {
+                // Input event for auto-advancing
+                input.addEventListener('input', function(e) {
+                    // Only allow numbers
+                    e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                    
+                    if (e.target.value.length === 1) {
+                        if (index < otpInputs.length - 1) {
+                            otpInputs[index + 1].focus();
+                        }
+                    }
+                });
+                
+                // Keydown event for navigation
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && e.target.value === '') {
+                        if (index > 0) {
+                            otpInputs[index - 1].focus();
+                        }
+                    } else if (e.key === 'ArrowLeft' && index > 0) {
+                        otpInputs[index - 1].focus();
+                    } else if (e.key === 'ArrowRight' && index < otpInputs.length - 1) {
+                        otpInputs[index + 1].focus();
+                    }
+                });
+                
+                // Paste event for full OTP
+                input.addEventListener('paste', function(e) {
+                    e.preventDefault();
+                    const pastedData = e.clipboardData.getData('text');
+                    if (pastedData.length === 6 && /^\d{6}$/.test(pastedData)) {
+                        for (let i = 0; i < 6; i++) {
+                            otpInputs[i].value = pastedData[i];
+                        }
+                        otpInputs[5].focus();
+                    }
+                });
+                
+                // Focus event for mobile
+                input.addEventListener('focus', function(e) {
+                    e.target.select();
+                });
+                
+                // Touch optimization for mobile
+                input.addEventListener('touchstart', function(e) {
+                    e.target.focus();
+                });
+            });
+        }
+
+        function generateOTP() {
+            return Math.floor(100000 + Math.random() * 900000);
+        }
+
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function showLoading(button) {
+            button.disabled = true;
+            const originalText = button.innerHTML;
+            button.innerHTML = '<div class="loading-spinner"></div> Processing...';
+            return originalText;
+        }
+
+        function hideLoading(button, originalText) {
+            button.disabled = false;
+            button.innerHTML = originalText;
+        }
+
+        function showError(message) {
+            errorText.textContent = message;
+            errorMessage.classList.remove('hidden');
+            
+            // Add haptic feedback for mobile devices
+            if ('vibrate' in navigator) {
+                navigator.vibrate([200, 100, 200]);
+            }
+            
+            setTimeout(() => {
+                errorMessage.classList.add('hidden');
+            }, 5000);
+        }
+
+        function updateSteps(step) {
+            // Update step indicators
+            document.querySelectorAll('.step').forEach((stepEl, index) => {
+                stepEl.classList.remove('active', 'completed');
+                if (index + 1 < step) {
+                    stepEl.classList.add('completed');
+                } else if (index + 1 === step) {
+                    stepEl.classList.add('active');
+                }
+            });
+            
+            // Show/hide step content
+            emailStep.classList.toggle('hidden', step !== 1);
+            otpStep.classList.toggle('hidden', step !== 2);
+            resultStep.classList.toggle('hidden', step !== 3);
+            
+            currentStep = step;
+        }
+
+        async function sendOTPToAirtable(email, otp) {
+            try {
+                const requestBody = {
+                    fields: {
+                        Email: email,
+                        OTP: otp
+                    }
+                };
+                
+                const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_CONFIG.baseId}/${AIRTABLE_CONFIG.otpTableName}`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${AIRTABLE_CONFIG.apiKey}`,
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.text();
+                    console.error('Airtable API Error Response:', errorData);
+                    throw new Error(`HTTP error! status: ${response.status}, response: ${errorData}`);
+                }
+
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error sending OTP to Airtable:', error);
+                throw error;
+            }
+        }
+
+        async function verifyOTPFromAirtable(email, otp) {
+            try {
+                const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_CONFIG.baseId}/${AIRTABLE_CONFIG.otpTableName}?filterByFormula=AND({Email}="${email}",{OTP}=${otp})`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${AIRTABLE_CONFIG.apiKey}`,
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return data.records.length > 0;
+            } catch (error) {
+                console.error('Error verifying OTP from Airtable:', error);
+                throw error;
+            }
+        }
+
+        async function recordDeletionAttempt(email, otpVerified) {
+            try {
+                const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_CONFIG.baseId}/${AIRTABLE_CONFIG.deletionTableName}`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${AIRTABLE_CONFIG.apiKey}`,
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        fields: {
+                            Email: email,
+                            Confirmation: otpVerified ? 'Account Successfully Deleted' : 'Deletion Failed'
+                        }
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error recording deletion attempt:', error);
+                throw error;
+            }
+        }
+
+        async function handleSendOTP() {
+            const email = emailInput.value.trim();
+            
+            if (!email) {
+                showError('Please enter your email address.');
+                return;
+            }
+            
+            if (!validateEmail(email)) {
+                showError('Please enter a valid email address.');
+                return;
+            }
+            
+            const originalText = showLoading(sendOtpBtn);
+            
+            try {
+                userEmail = email;
+                generatedOTP = generateOTP();
+                
+                await sendOTPToAirtable(email, generatedOTP);
+                
+                updateSteps(2);
+                startResendTimer();
+                
+            } catch (error) {
+                console.error('Error sending OTP:', error);
+                
+                // Record failed attempt
+                try {
+                    await recordDeletionAttempt(email, false);
+                } catch (recordError) {
+                    console.error('Error recording failed attempt:', recordError);
+                }
+                
+                showError('Failed to send verification code. Please try again.');
+            } finally {
+                hideLoading(sendOtpBtn, originalText);
+            }
+        }
+
+        async function handleVerifyOTP() {
+            const otpValue = Array.from(otpInputs).map(input => input.value).join('');
+            
+            if (otpValue.length !== 6) {
+                showError('Please enter the complete 6-digit verification code.');
+                return;
+            }
+            
+            const originalText = showLoading(verifyOtpBtn);
+            
+            try {
+                // Convert string OTP to number for comparison
+                const otpNumber = parseInt(otpValue, 10);
+                const isValid = await verifyOTPFromAirtable(userEmail, otpNumber);
+                
+                if (isValid) {
+                    await recordDeletionAttempt(userEmail, true);
+                    successMessage.classList.remove('hidden');
+                    updateSteps(3);
+                    
+                    // Add success haptic feedback
+                    if ('vibrate' in navigator) {
+                        navigator.vibrate([100, 50, 100]);
+                    }
+                } else {
+                    showError('Invalid verification code. Please check and try again.');
+                }
+                
+            } catch (error) {
+                console.error('Error verifying OTP:', error);
+                showError('Failed to verify code. Please try again.');
+            } finally {
+                hideLoading(verifyOtpBtn, originalText);
+            }
+        }
+
+        async function handleResendOTP() {
+            const originalText = showLoading(resendBtn);
+            
+            try {
+                generatedOTP = generateOTP();
+                await sendOTPToAirtable(userEmail, generatedOTP);
+                
+                resendBtn.classList.add('hidden');
+                timerText.classList.remove('hidden');
+                startResendTimer();
+                
+                // Clear OTP inputs
+                otpInputs.forEach(input => input.value = '');
+                otpInputs[0].focus();
+                
+            } catch (error) {
+                console.error('Error resending OTP:', error);
+                showError('Failed to resend verification code. Please try again.');
+            } finally {
+                hideLoading(resendBtn, originalText);
+            }
+        }
+
+        function startResendTimer() {
+            resendCountdown = 60;
+            countdownSpan.textContent = resendCountdown;
+            resendBtn.classList.add('hidden');
+            timerText.classList.remove('hidden');
+            
+            countdownTimer = setInterval(() => {
+                resendCountdown--;
+                countdownSpan.textContent = resendCountdown;
+                
+                if (resendCountdown <= 0) {
+                    clearInterval(countdownTimer);
+                    timerText.classList.add('hidden');
+                    resendBtn.classList.remove('hidden');
+                }
+            }, 1000);
+        }
+
+        function goBackToEmail() {
+            updateSteps(1);
+            if (countdownTimer) {
+                clearInterval(countdownTimer);
+            }
+            otpInputs.forEach(input => input.value = '');
+        }
+
+        // Update copyright year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html> 
